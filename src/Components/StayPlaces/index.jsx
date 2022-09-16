@@ -1,0 +1,153 @@
+import React, {useState} from "react";
+import PlaceCard from "./PlaceCard";
+import { HiArrowNarrowRight} from 'react-icons/hi'
+
+import img1 from "../../Assets/stay-slider/img1.jpeg";
+import img2 from "../../Assets/stay-slider/img2.jpeg";
+import img3 from "../../Assets/stay-slider/img3.jpeg";
+import img4 from "../../Assets/stay-slider/img4.jpeg";
+import img5 from "../../Assets/stay-slider/img5.jpeg";
+import img6 from "../../Assets/stay-slider/img6.jpeg";
+import img7 from "../../Assets/stay-slider/img7.jpeg";
+import img8 from "../../Assets/stay-slider/img8.jpeg";
+import img9 from "../../Assets/stay-slider/pexels-photo-1638341.jpeg";
+import img10 from "../../Assets/stay-slider/pexels-photo-2079452.jpeg";
+import img11 from "../../Assets/stay-slider/pexels-photo-2290738.jpeg";
+import img12 from "../../Assets/stay-slider/pexels-photo-2343466.jpeg";
+import img13 from "../../Assets/stay-slider/pexels-photo-2404422.jpeg";
+import img14 from "../../Assets/stay-slider/pexels-photo-261327.jpeg";
+import img15 from "../../Assets/stay-slider/pexels-photo-261410.jpeg";
+import img16 from "../../Assets/stay-slider/pexels-photo-2677398.jpeg";
+import img17 from "../../Assets/stay-slider/pexels-photo-2736187.jpeg";
+import img18 from "../../Assets/stay-slider/pexels-photo-276746.jpeg";
+import img19 from "../../Assets/stay-slider/pexels-photo-2983472.jpeg";
+import img20 from "../../Assets/stay-slider/pexels-photo-3068519.jpeg";
+
+const StayPlaceslist = [
+  {
+    images: [img1, img2, img3, img4],
+    beds: "10",
+    title: "Best Western Cedars",
+    location: "1 Anzinger Court",
+    rate: "26",
+    star: "4.8",
+    total: "28",
+  },
+  {
+    images: [img5, img6, img7, img8],
+    beds: "6",
+    title: "Bell By Greene King Inns",
+    location: "32923 Judy Hill",
+    rate: "250",
+    star: "4.4",
+    total: "198",
+  },
+  {
+    images: [img9, img10, img11, img12],
+    beds: "9",
+    title: "Half Moon, Sherborne By Marnstone",
+    location: "6731 Killdeer Park",
+    rate: "278",
+    star: "3.6",
+    total: "16",
+  },
+  {
+    images: [img13, img14, img15, img16],
+    beds: "7",
+    title: "Best Western Cedars",
+    location: "35 Sherman Park",
+    rate: "40",
+    star: "4.8",
+    total: "34",
+  },
+  {
+    images: [img17, img18, img19, img20],
+    beds: "3",
+    title: "Ship and castle Hotel",
+    location: "3 Crest Line Park",
+    rate: "147",
+    star: "3.4",
+    total: "340",
+  },
+  {
+    images: [img7, img12, img1, img3],
+    beds: "7",
+    title: "",
+    location: "55974 Waxwing Junction",
+    rate: "90",
+    star: "3.8",
+    total: "508",
+  },
+  {
+    images: [img6, img11, img9, img14],
+    beds: "2",
+    title: "Best Western Cedars",
+    location: "79361 Chinook Place",
+    rate: "282",
+    star: "3",
+    total: "481",
+  },
+  {
+    images: [img8, img12, img18, img1],
+    beds: "7",
+    title: "Best Western Cedars",
+    location: "6 Chive Avenue",
+    rate: "79",
+    star: "3.9",
+    total: "188",
+  },
+];
+
+
+const StayPlaces = () => {
+    const [active, setActive] = useState("1")
+
+  return (
+    <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28 bg-gray-100">
+      <div className="relative py-16">
+        <div className="flex flex-col mb-8">
+          <div className="flex flex-col relative sm:flex-row sm:items-end justify-between mb-10 md:mb-12 ">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl md:text-4xl font-semibold">
+                Featured places to stay
+              </h2>
+              <span className="mt-2 md:mt-4 font-normal block text-base sm:text-lg text-neutral-500 dark:text-neutral-400">
+                Popular places to stay that Chisfis recommends for you
+              </span>
+            </div>
+          </div>
+          <div className="flex items-center justify-between">
+            <nav className="relative flex w-full text-sm md:text-base">
+              <ul className="flex sm:space-x-2">
+                <li className="relative" onClick={()=> setActive("1")}>
+                  <button className={`block px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 hover:text-black rounded-full ${active === '1' ? 'bg-secondary-800' : ""} text-secondary-50 text-neutral-500  focus:outline-none`}>New York</button>
+                </li>
+                <li className="relative" onClick={()=> setActive("2")}>
+                  <button className={`block px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 rounded-full hover:text-black ${active === '2' ? 'bg-secondary-800' : ""} text-neutral-500 focus:outline-none`}>Tokyo</button>
+                </li>
+                <li className="relative" onClick={()=> setActive("3")}>
+                  <button className={`block px-5 py-2.5 text-sm sm:text-base hover:text-black sm:px-6 sm:py-3 rounded-full ${active === '3' ? 'bg-secondary-800' : ""} text-neutral-500 focus:outline-none`}>Paris</button>
+                </li>
+                <li className="relative" onClick={()=> setActive("4")}>
+                  <button className={`block px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 hover:text-black rounded-full ${active === '4' ? 'bg-secondary-800' : ""} text-neutral-500 focus:outline-none`}>London</button>
+                </li>
+              </ul>
+            </nav>
+
+            <span className="hidden sm:block flex-shrink-0">
+                <button className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6 font-medium border bg-white border-neutral-200 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-black !leading-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">View all <span><HiArrowNarrowRight /></span></button>
+            </span>
+          </div>
+        </div>
+
+        <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+          {StayPlaceslist.map((places) => {
+            return <PlaceCard {...places} />;
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default StayPlaces;

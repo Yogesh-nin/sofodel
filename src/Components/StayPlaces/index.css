@@ -1,0 +1,32 @@
+.line-clamp-1{
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    -webkit-line-clamp: 1;
+}
+
+.star{
+    color: #F97316;
+    font-size: 16px;
+}
+.slick-dots{
+    top: 170px;
+}
+
+.slick-dots li button:before{
+    color: floralwhite;
+}
+.slick-dots li.slick-active button:before {
+    color:White !important;
+}
+
+.bg-secondary-800{
+    background-color: #115E59;
+    color: #ffffff;
+}
+
+.bg-secondary-800:hover{
+    color: #ffffff;
+}
