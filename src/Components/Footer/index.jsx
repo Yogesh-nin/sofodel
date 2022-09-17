@@ -11,16 +11,16 @@ const Footer = () => {
                     <a href="" className="inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24">
                     <div className="flex items-end">
                     <FaMapMarkerAlt size={42} className="text-indigo-600" /> 
-                    <span className="font-medium text-4xl text-gray-900 font-bold">.fis</span>
+                    <span className="font-medium text-2xl md:text-4xl text-gray-900 font-bold">.fis</span>
                   </div>
                     </a>
                 </div>
                 <div className="col-span-2 flex items-center md:col-span-3">
-                    <div className='social-links flex items-center space-x-3 lg:space-x-0 lg:flex-col lg:space-y-2.5 lg:items-start'>
-                        <a href="#" className='flex items-center text-2xl my-2 hover:text-black leading-none space-x-2'><RiFacebookBoxLine className='icon mr-2'/> Facebook</a>
-                        <a href="#" className='flex items-center text-2xl  my-2 text-neutral-700 hover:text-black leading-none space-x-2'><RiTwitterFill className='icon mr-2'/> Twitter</a>
-                        <a href="#" className='flex items-center  my-2 text-2xl text-neutral-700 hover:text-black leading-none space-x-2'><RiYoutubeLine className='icon mr-2'/> YouTube</a>
-                        <a href="#" className='flex items-center text-2xl text-neutral-700 hover:text-black leading-none space-x-2 my-2'><RiInstagramLine className='icon mr-2'/> Instagram</a>
+                    <div className='social-links flex items-center space-x-2 lg:space-x-0 lg:flex-col lg:space-y-2.5 lg:items-start'>
+                        <a href="#" className='flex items-center text-2xl my-2 hover:text-black leading-none space-x-2'><RiFacebookBoxLine className='icon mr-2'/> <span className="hidden md:block">Facebook</span></a>
+                        <a href="#" className='flex items-center text-2xl  my-2 text-neutral-700 hover:text-black leading-none space-x-2'><RiTwitterFill className='icon mr-2'/> <span className="hidden md:block">Twitter</span></a>
+                        <a href="#" className='flex items-center  my-2 text-2xl text-neutral-700 hover:text-black leading-none space-x-2'><RiYoutubeLine className='icon mr-2'/> <span className="hidden md:block"> YouTube</span></a>
+                        <a href="#" className='flex items-center text-2xl text-neutral-700 hover:text-black leading-none space-x-2 my-2'><RiInstagramLine className='icon mr-2'/> <span className="hidden md:block">Instagram</span></a>
                     </div>
                 </div>
             </div>
