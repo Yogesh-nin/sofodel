@@ -77,7 +77,7 @@ const MobileTabs = () => {
 
 const LargeTabs = () => {
   return (
-    <div className="nc-Header bg-white fixed top-0 w-full left-0 right-0 z-40 shadow-sm dark:border-b dark:border-gray-100">
+    <div className="nc-Header bg-white fixed top-0 w-full left-0 right-0 z-40 shadow-sm dark:border-b">
       <div className="relative z-10 px-1">
         <div className="px-4 lg:container py-4 lg:py-5  relative flex  justify-around items-center">
         <div className="hidden md:flex justify-start flex-1  items-center space-x-4 sm:space-x-10">
