@@ -54,12 +54,12 @@ const Nearby = () => {
     <div className='container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28'>
         <div className="relative">
             <div className="relative">
-                <div className="relative flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-gray-900 dark:text-gray-50">
+                <div className="relative flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-gray-900">
                     <div className="text-center w-full max-w-2xl mx-auto text-gray-900">
-                        <h2 className="text-center w-full max-w-2xl mx-auto">
+                        <h2 className="text-center w-full max-w-2xl mx-auto text-3xl sm:text-4xl font-semibold">
                             Explore nearby
                         </h2>
-                        <span className="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400">
+                        <span className="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-gray-500">
                             Discover great place near where you live
                         </span>
                     </div>

@@ -10,7 +10,7 @@ const NearbyCard = (props) => {
         </div>
         <div className="ml-4 flex-grow overflow-hidden">
             <h2 className="text-base font-medium">{props.title}</h2>
-            <span className="block mt-2 text-sm text-neutral-500 dark:text-neutral-400">19 minutes drive</span>
+            <span className="block mt-2 text-sm text-gray-500 ">19 minutes drive</span>
         </div>
     </a>
   )

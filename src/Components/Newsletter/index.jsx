@@ -8,7 +8,7 @@ const NewsLetter = () => {
       <div className="relative flex flex-col lg:flex-row lg:items-center">
         <div className="flex-shrink-0 mb-10 lg:mb-0 lg:mr-10 lg:w-2/5">
           <h2 className="font-semibold text-4xl">Join our newsletter 🎉</h2>
-          <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
+          <span className="block mt-5 text-gray-500">
             Read and share new perspectives on just about any topic. Everyone’s
             welcome.
           </span>
@@ -17,7 +17,7 @@ const NewsLetter = () => {
               <span className="inline-flex px-2.5 py-1 rounded-full  font-medium text-xs relative text-blue-800 bg-blue-100 ">
                 01
               </span>
-              <span className="font-medium text-neutral-700 dark:text-neutral-400">
+              <span className="font-medium text-gray-700">
                 Get more discount
               </span>
             </li>
@@ -25,7 +25,7 @@ const NewsLetter = () => {
               <span className="inline-flex px-2.5 py-1 rounded-full  font-medium text-xs relative text-red-800 bg-red-100 ">
                 02
               </span>
-              <span className="font-medium text-neutral-500 dark:text-neutral-400">
+              <span className="font-medium text-gray-700">
                 Get premium magazine
               </span>
             </li>
@@ -34,7 +34,7 @@ const NewsLetter = () => {
           <form className="mt-10 relative max-w-sm">
             <input placeholder="enter your email" type="email" className="block w-full h-11 px-4 py-3 border border-gray-700 focus:border-indigo-0 rounded-full focus:ring focus:ring-opacity bg-white" />
 
-            <button type="button" className="flex items-center justify-center rounded-full disabled:bg-opacity-70 bg-indigo-600 hover:bg-primary-700 text-gray-50 absolute transform top-1/2 -translate-y-1/2 right-[5px]  w-9 h-9  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 dark:focus:ring-offset-0 focus:ring-offset-indigo-600">
+            <button type="button" className="flex items-center justify-center rounded-full disabled:bg-opacity-70 bg-indigo-600 hover:bg-primary-700 text-gray-50 absolute transform top-1/2 -translate-y-1/2 right-[5px]  w-9 h-9  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 focus:ring-offset-indigo-600">
                 <BiRightArrowAlt className="text-xl" />
             </button>
           </form>
@@ -50,5 +50,3 @@ const NewsLetter = () => {
 };
 
 export default NewsLetter;
-
-// border-gray-300 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-gray-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-gray-900 rounded-full text-sm font-normal  

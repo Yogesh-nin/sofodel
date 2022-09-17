@@ -78,7 +78,7 @@ const MobileTabs = () => {
 const LargeTabs = () => {
   return (
     <div className="nc-Header bg-white fixed top-0 w-full left-0 right-0 z-40 shadow-sm dark:border-b dark:border-gray-100">
-      <div className="relative z-10 px-5">
+      <div className="relative z-10 px-1">
         <div className="px-4 lg:container py-4 lg:py-5  relative flex  justify-around items-center">
         <div className="hidden md:flex justify-start flex-1  items-center space-x-4 sm:space-x-10">
             <div className="flex items-center">
@@ -93,7 +93,7 @@ const LargeTabs = () => {
                 
               </a>
 
-              <ul className="text-gray-900 hidden lg:flex lg:flex-wrap lg:items-center lg:space-x-1 relative  ">
+              <ul className="text-gray-900 hidden lg:flex lg:flex-wrap lg:items-center lg:space-x-1 relative pl-4">
                 {navList.map((item) => {
                   return (
                     <>
@@ -148,12 +148,12 @@ const LargeTabs = () => {
           
           <div className="hidden md:flex flex items-center gap-4 ml-6 ">
             <div className="flex xl:hidden items-center">
-              <MdOutlineLightMode className="mr-2" size={24} />
-              <GiHamburgerMenu className="ml-2" size={24} />
+              <MdOutlineLightMode className="mr-2 cursor-pointer" size={24} />
+              <GiHamburgerMenu className="ml-2 cursor-pointer" size={24} />
             </div>
             <div className="hidden xl:flex items-center space-x-0.5">
-              <MdOutlineLightMode className="mx-2" size={24} />
-              <VscSearch className="mx-2"size={24} />
+              <MdOutlineLightMode className="mx-2 cursor-pointer" size={24} />
+              <VscSearch className="mx-2 cursor-pointer"size={24} />
               <button
                 className="hero-btn transition-colors mx-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"
                 type="button"

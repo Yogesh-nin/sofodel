@@ -17,17 +17,17 @@ const Features = () => {
             <li className="space-y-4">
               <span className='inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-blue-800 bg-blue-100  relative'>Advertising</span>
               <span className='block text-xl font-semibold'>Cost effective advertising</span>
-              <span className='block mt-4 text-neutral-500 dark:text-neutral-400'>With a free listing, you can advertise your rental with no upfront costs</span>
+              <span className='block mt-4 text-gray-500'>With a free listing, you can advertise your rental with no upfront costs</span>
             </li>
             <li className="space-y-4">
               <span className='inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-green-800 bg-green-100  relative'>Exposure</span>
               <span className='block text-xl font-semibold'>Reach millions with chisfis</span>
-              <span className='block mt-4 text-neutral-500 dark:text-neutral-400'>Millions of people are searching for unique places to stay around the world</span>
+              <span className='block mt-4 text-gray-500'>Millions of people are searching for unique places to stay around the world</span>
             </li>
             <li className="space-y-4">
               <span className='inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-red-800 bg-red-100  relative'>Secure</span>
               <span className='block text-xl font-semibold'>Secure and simple</span>
-              <span className='block mt-4 text-neutral-500 dark:text-neutral-400'>A Holiday Lettings listing gives you a secure and easy way to take bookings and payments online</span>
+              <span className='block mt-4 text-gray-500'>A Holiday Lettings listing gives you a secure and easy way to take bookings and payments online</span>
             </li>
           </ul>
         </div>
