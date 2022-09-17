@@ -1,0 +1,19 @@
+.discovery-card-section{
+    margin-right: 15px;
+}
+.discovery-card-section img{
+    width: 309px;
+    height: 331px;
+}
+@media (max-width: 996px){
+    .discovery-card-section img{
+        width: 232px;
+        height: 278px;
+    }
+}
+@media (max-width: 576px){
+    .discovery-card-section img{
+        width: 274px;
+        height: 219px;
+    }
+}

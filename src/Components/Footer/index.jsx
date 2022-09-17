@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaMapMarkerAlt } from 'react-icons/fa'
 import { RiFacebookBoxLine, RiInstagramLine, RiTwitterFill, RiYoutubeLine } from 'react-icons/ri'
 import './index.css'
 const Footer = () => {
@@ -6,8 +7,16 @@ const Footer = () => {
     <div className='relative py-24 lg:py-28 border-t border-neutral-200 dark:border-neutral-700'>
         <div className="container grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-10 ">
             <div className="grid grid-cols-4 gap-5 col-span-2 md:col-span-4 lg:md:col-span-1 lg:flex lg:flex-col">
+                <div className="col-span-2 md:col-span-1">
+                    <a href="" className="inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24">
+                    <div className="flex items-end">
+                    <FaMapMarkerAlt size={42} className="text-indigo-600" /> 
+                    <span className="font-medium text-4xl text-gray-900 font-bold">.fis</span>
+                  </div>
+                    </a>
+                </div>
                 <div className="col-span-2 flex items-center md:col-span-3">
-                    <div className='social-links'>
+                    <div className='social-links flex items-center space-x-3 lg:space-x-0 lg:flex-col lg:space-y-2.5 lg:items-start'>
                         <a href="#" className='flex items-center text-2xl my-2 hover:text-black leading-none space-x-2'><RiFacebookBoxLine className='icon mr-2'/> Facebook</a>
                         <a href="#" className='flex items-center text-2xl  my-2 text-neutral-700 hover:text-black leading-none space-x-2'><RiTwitterFill className='icon mr-2'/> Twitter</a>
                         <a href="#" className='flex items-center  my-2 text-2xl text-neutral-700 hover:text-black leading-none space-x-2'><RiYoutubeLine className='icon mr-2'/> YouTube</a>

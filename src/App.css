@@ -3,3 +3,10 @@
   padding-left: 128px;
   padding-right: 128px;
 }
+
+@media (max-width: 997px){
+  .container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
