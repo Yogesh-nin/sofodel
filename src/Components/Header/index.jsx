@@ -130,16 +130,18 @@ const LargeTabs = () => {
             </div>
             
           </div>
-          <div className="lg:hidden flex-[3] max-w-lg !mx-auto md:px-3">
+          <div className="lg:hidden flex-[3] max-w-lg !mx-auto  md:px-3">
             <div className="">
-              <button className="relative flex items-center w-full border border-neutral-200 dark:border-neutral-6000 px-4 py-2 pr-11 rounded-full shadow-lg">
+              <button className="relative flex items-center w-full border border-neutral-200 dark:border-neutral-6000 px-2 py-2 pr-11 rounded-full shadow-lg">
                 <GrSearch />
                 <div className="ml-3 flex-1 text-left overflow-hidden">
                   <span className="block font-medium text-sm">Where to?</span>
                   <span className="block mt-0.5 text-xs font-light text-neutral-500 dark:text-neutral-400 line-clamp-1">Anywhere • Any week • Add guests</span>
-                  <span className="absolute right-2 top-1/2 transform -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-6000 dark:text-neutral-300"></span>
-                </div>
+                  <span className="absolute right-2 top-1/2 transform -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-6000 dark:text-neutral-300">
                 <HiShare />
+
+                  </span>
+                </div>
               </button>
             </div>
           </div>
