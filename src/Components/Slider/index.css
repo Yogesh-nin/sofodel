@@ -1,6 +1,4 @@
-.slick-prev:before, .slick-next:before {
-    color: #09529b !important;
-  }
+
 
 .card-section{
   margin-right: 10px;
@@ -13,12 +11,16 @@
   height: 314px;
 }
 
-.w-224{
-  width: 224px;
-}
-
 .h-168{
   height: 168px;
+}
+
+.w-309{
+  width: 309px;
+}
+
+.h-331{
+  height: 331px;
 }
 
 @media (max-width: 996px){
@@ -27,6 +29,10 @@
   }
   .md-h-325{
     height: 325px;
+  }
+
+  .md-h-278{
+    height: 278px;
   }
 }
 
@@ -41,4 +47,26 @@
   .sm-h-205{
     height: 205px;
   }
+}
+
+.swiper-container {
+  width: 480px !important;
+}
+
+@media screen and (min-width: 576px) {
+  .swiper-container {
+    width: 576px !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-container {
+    width: 768px !important;
+  }
+}
+
+@media screen and (min-width: 996px) {
+.swiper-container{
+  width: 996px !important;
+}
 }

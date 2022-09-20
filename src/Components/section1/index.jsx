@@ -1,47 +1,47 @@
 import React from 'react'
-import SliderComponent from '../Slider'
-import newYork from "../../Assets/new-york.jpeg";
-import tokyo from "../../Assets/tokyo.jpeg";
-import paris from "../../Assets/paris.jpeg";
-import london from "../../Assets/london.jpeg";
-import singapore from "../../Assets/singapore.jpeg";
-import maldives from "../../Assets/maldives.jpeg";
+import newDelhi from '../../Assets/StayTrails/Locaton/india-gate.jpeg'
+import tajmahal from '../../Assets/StayTrails/Locaton/tajmahal.jpg'
+import mumbai from '../../Assets/StayTrails/Locaton/mumbai.jpg'
+import banglore from '../../Assets/StayTrails/Locaton/banglore.jpg'
+import kolkata from '../../Assets/StayTrails/Locaton/kolkata.jpg'
+import chennai from '../../Assets/StayTrails/Locaton/Chennai_Central.jpg'
+import SwiperComponent from '../Slider/SwiperComponent';
 
 const citylist = [
   {
     id: "0",
-    image: newYork,
-    title: "New York",
+    image: newDelhi,
+    title: "New Delhi",
     properties: "188,288 properties",
   },
   {
     id: "1",
-    image: singapore,
-    title: "Singapore",
+    image: tajmahal,
+    title: "Agra",
     properties: "188,288 properties",
   },
   {
     id: "2",
-    image: paris,
-    title: "Paris",
+    image: mumbai,
+    title: "Mumbai",
     properties: "188,288 properties",
   },
   {
     id: "3",
-    image: london,
-    title: "London",
+    image: banglore,
+    title: "Banglore",
     properties: "188,288 properties",
   },
   {
     id: "4",
-    image: tokyo,
-    title: "Tokyo",
+    image: kolkata,
+    title: "Kolkata",
     properties: "188,288 properties",
   },
   {
     id: "5",
-    image: maldives,
-    title: "Maldives",
+    image: chennai,
+    title: "Chennai",
     properties: "188,288 properties",
   },
 ];
@@ -55,7 +55,7 @@ const Cities = () => {
             <span className='mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400'>Description of section</span>
         </div>
         <div className="">
-          <SliderComponent array={citylist} classes="w-224 h-314 md-w-232 md-h-325 sm-w-274 sm-h-219" />
+          <SwiperComponent array={citylist} classes="w-224 h-314 md-w-232 md-h-325 sm-w-274 sm-h-219" noOfSlides={5} />
         </div>
 
     </div>

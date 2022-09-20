@@ -2,19 +2,19 @@ import React, { useState } from "react";
 // import "./index.css";
 import { useParams } from "react-router-dom";
 import { VscSearch, VscHeart } from "react-icons/vsc";
-import { MdOutlineLightMode, MdOutlineMenu } from "react-icons/md";
+import { MdOutlineMenu } from "react-icons/md";
 import { HiOutlineUserCircle } from "react-icons/hi";
-import DropDown from '../Dropdown'
 import { GrSearch } from 'react-icons/gr'
 import {HiShare} from 'react-icons/hi'
 import {GiHamburgerMenu} from 'react-icons/gi'
-import { FaMapMarkerAlt } from 'react-icons/fa'
+import logo from '../../Assets/StayTrails/nav-logo.png'
+
 const navList = [
   "Home",
-  "Five Columns",
-  "Listing Page",
-  "Templates",
-  "Other Pages",
+  "About",
+  "Properties",
+  "Experience",
+  "Contact us",
 ];
 
 
@@ -47,7 +47,7 @@ const MobileTabs = () => {
 
   return (
     <>
-      <div className="md:hidden bg-white shadow-lg fixed bottom-0 z-10 w-full p-2  flex items-center justify-between md:justify-evenly text-gray-500 border">
+      <div className="md:hidden bg-white shadow-lg fixed bottom-0 z-10 w-full p-2 overflow-x-hidden flex items-center justify-between md:justify-evenly text-gray-500 border">
         {allTypes.map((item) => (
           <a key={item.id} to="/" className="w-1/4">
             <div
@@ -77,19 +77,18 @@ const MobileTabs = () => {
 
 const LargeTabs = () => {
   return (
-    <div className="nc-Header bg-white fixed top-0 w-full left-0 right-0 z-40 shadow-sm dark:border-b">
+    <div className="nc-Header bg-white fixed top-0 w-full left-0 right-0 z-40 shadow-sm">
       <div className="relative z-10 px-1">
-        <div className="px-4 lg:container py-4 lg:py-5  relative flex  justify-around items-center">
+        <div className="px-4 container lg:container py-4 lg:py-5  relative flex  justify-around items-center">
         <div className="hidden md:flex justify-start flex-1  items-center space-x-4 sm:space-x-10">
             <div className="flex items-center">
               <a
                 href="/"
                 className="inline-block text-indigo-6000 focus:outline-none focus:ring-0 w-24"
               >
-                <div className="flex items-end">
-                    <FaMapMarkerAlt size={42} className="text-indigo-600" /> 
-                    <span className="font-medium text-4xl text-gray-900 font-bold">.fis</span>
-                  </div>
+                <div className="">
+                  <img src={logo} alt="" className="" />
+                </div>
                 
               </a>
 
@@ -101,28 +100,12 @@ const LargeTabs = () => {
                         <a
                           href="#"
                           className="hover:text-black inline-flex  items-center rounded-full"
-                          data-dropdown-toggle="dropdown"
+                          id="menu-button" aria-expanded="true" aria-haspopup="true"
                         >
                           {item}
-                          {
-                            <svg
-                              class="ml-2 w-4 h-4"
-                              aria-hidden="true"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                              ></path>
-                            </svg>
-                          }
                         </a>
                       </li>
+                      
                     </>
                   );
                 })}
@@ -148,14 +131,12 @@ const LargeTabs = () => {
           
           <div className="hidden md:flex flex items-center gap-4 ml-6 ">
             <div className="flex xl:hidden items-center">
-              <MdOutlineLightMode className="mr-2 cursor-pointer" size={24} />
               <GiHamburgerMenu className="ml-2 cursor-pointer" size={24} />
             </div>
             <div className="hidden xl:flex items-center space-x-0.5">
-              <MdOutlineLightMode className="mx-2 cursor-pointer" size={24} />
               <VscSearch className="mx-2 cursor-pointer"size={24} />
               <button
-                className="hero-btn transition-colors mx-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"
+                className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  disabled:bg-opacity-70 bg-dark-gold hover:bg-light-gold text-gray-50  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark-gold"
                 type="button"
               >
                 Sign Up

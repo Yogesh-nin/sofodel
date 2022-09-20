@@ -34,7 +34,7 @@ const NewsLetter = () => {
           <form className="mt-10 relative max-w-sm">
             <input placeholder="enter your email" type="email" className="block w-full h-11 px-4 py-3 border border-gray-700 focus:border-indigo-0 rounded-full focus:ring focus:ring-opacity bg-white" />
 
-            <button type="button" className="flex items-center justify-center rounded-full disabled:bg-opacity-70 bg-indigo-600 hover:bg-primary-700 text-gray-50 absolute transform top-1/2 -translate-y-1/2 right-[5px]  w-9 h-9  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 focus:ring-offset-indigo-600">
+            <button type="button" className="flex items-center justify-center rounded-full !leading-none disabled:bg-opacity-70 bg-dark-gold hover:bg-light-gold text-neutral-50 absolute transform top-1/2 -translate-y-1/2 right-[5px] w-9 h-9  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark-gold">
                 <BiRightArrowAlt className="text-xl" />
             </button>
           </form>

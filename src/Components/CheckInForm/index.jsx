@@ -17,7 +17,7 @@ const CheckInForm = () => {
                 active === "1" ? "block" : "hidden"
               }`}
             ></span>
-            <span className="">Stays</span>
+            <span className="">Properties</span>
           </li>
           <li
             className="flex-shrink-0 flex items-center cursor-pointer text-sm lg:text-base font-medium"
@@ -31,30 +31,7 @@ const CheckInForm = () => {
 
             <span className="">Experience</span>
           </li>
-          <li
-            className="flex-shrink-0 flex items-center cursor-pointer text-sm lg:text-base font-medium"
-            onClick={() => setActive("3")}
-          >
-            <span
-              className={`w-2.5 h-2.5 rounded-full bg-gray-800 mr-2 ${
-                active === "3" ? "block" : "hidden"
-              }`}
-            ></span>
-
-            <span className="">Cars</span>
-          </li>
-          <li
-            className="flex-shrink-0 flex items-center cursor-pointer text-sm lg:text-base font-medium"
-            onClick={() => setActive("4")}
-          >
-            <span
-              className={`w-2.5 h-2.5 rounded-full bg-gray-800 mr-2 ${
-                active === "4" ? "block" : "hidden"
-              }`}
-            ></span>
-
-            <span className="">Flights</span>
-          </li>
+          
         </ul>
         <form
           action=""
@@ -68,8 +45,8 @@ const CheckInForm = () => {
               <div className="flex-grow">
                 <input
                   type="text"
-                  className="block w-full bg-transparent border-none focus:ring-0 p-0 focus:outline-none focus:placeholder-gray-300 xl:text-lg font-semibold placeholder-gray-800 dark:placeholder-gray-200 truncate"
-                  placeholder="Location"
+                  className="block w-full bg-transparent border-none focus:ring-0 p-0 focus:outline-none focus:placeholder-gray-300 xl:text-lg font-semibold placeholder-gray-800 truncate"
+                  placeholder="Around City"
                 />
               </div>
             </div>
@@ -80,7 +57,11 @@ const CheckInForm = () => {
                 <MdDateRange size={42} />
               </div>
               <div className="flex-grow">
-                <div className="block xl:text-lg font-semibold">Date</div>
+              <input
+                  type="text"
+                  className="block w-full bg-transparent border-none focus:ring-0 p-0 focus:outline-none focus:placeholder-gray-300 xl:text-lg font-semibold placeholder-gray-800 truncate"
+                  placeholder="Travel choice"
+                />
               </div>
             </div>
           </div>
@@ -90,11 +71,15 @@ const CheckInForm = () => {
                 <BiUserPlus size={42} />
               </div>
               <div className="flex-grow">
-                <div className="block xl:text-lg font-semibold">Guests</div>
+              <input
+                  type="text"
+                  className="block w-full bg-transparent border-none focus:ring-0 p-0 focus:outline-none focus:placeholder-gray-300 xl:text-lg font-semibold placeholder-gray-800 truncate"
+                  placeholder="In Region/State"
+                />
               </div>
             </div>
             <div className="pr-2 xl:pr-4">
-              <button className="h-14 md:h-16 w-full md:w-16 rounded-full bg-primary-6000 hover:bg-primary-700 flex items-center justify-center text-gray-50 focus:outline-none">
+              <button className="h-14 md:h-16 w-full md:w-16 rounded-full bg-dark-gold hover:bg-light-gold flex items-center justify-center text-gray-50 focus:outline-none">
                 <FaSearch />
               </button>
             </div>

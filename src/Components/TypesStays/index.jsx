@@ -1,10 +1,10 @@
 import React from 'react'
-import SliderComponent from '../Slider'
 import img1 from '../../Assets/types/pexels-photo-2351649.jpeg'
 import img2 from '../../Assets/types/pexels-photo-248837.jpeg'
 import img3 from '../../Assets/types/pexels-photo-2581922.jpeg'
 import img4 from '../../Assets/types/pexels-photo-3613236.jpeg'
 import img5 from '../../Assets/types/pexels-photo-962464.jpeg'
+import SwiperComponent from '../Slider/SwiperComponent'
 
 const types = [
     {
@@ -46,7 +46,7 @@ const StaysTypes = () => {
             <span className='mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400'>Explore houses based on 10 types of stays</span>
         </div>
         <div className="">
-          <SliderComponent array={types} classes="w-224 h-168 sm-w-274 sm-h-205" />
+          <SwiperComponent array={types} classes="w-224 h-168 sm-w-274 sm-h-205" />
         </div>
 
     </div>

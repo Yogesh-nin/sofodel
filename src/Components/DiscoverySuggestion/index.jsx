@@ -1,6 +1,37 @@
 import React from 'react'
-import SliderComponent from './SliderComponent'
+import SwiperComponent from '../Slider/SwiperComponent'
+import img1 from '../../Assets/pexels-photo-247532 (1).jpeg'
+import img2 from '../../Assets/pexels-photo-2869499.jpeg'
+import img3 from '../../Assets/pexels-photo-5764100.jpeg'
+import img4 from '../../Assets/pexels-photo-7031413.jpeg'
 
+const discovery = [
+    {
+      image: img1,
+      title: "Sleep in a floating way",
+      properties: "188,288 properties"
+    },
+    {
+      image: img2,
+      title: "In the billionaire's house",
+      properties: "188,288 properties"
+    },
+    {
+      image: img3,
+      title: "Cool in the deep forest",
+      properties: "188,288 properties"
+    },
+    {
+      image: img4,
+      title: "Enjoy the great cold",
+      properties: "188,288 properties"
+    },
+    {
+      image: img2,
+      title: "Enjoy the great cold",
+      properties: "188,288 properties"
+    },
+  ]
 
 const DiscoverySuggestion = () => {
 
@@ -18,7 +49,7 @@ const DiscoverySuggestion = () => {
                 </div>
 
                 <div className="">
-                    <SliderComponent />
+                    <SwiperComponent array={discovery} classes="w-309 h-331 md-w-232 md-h-278 sm-w-234 sm-h-219" />
                 </div>
                 
             </div>

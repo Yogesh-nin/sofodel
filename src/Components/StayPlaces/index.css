@@ -11,22 +11,10 @@
     color: #F97316;
     font-size: 16px;
 }
-.slick-dots{
-    top: 170px;
+.stay-places-slider button{
+    display: none;
 }
 
-.slick-dots li button:before{
-    color: floralwhite;
-}
-.slick-dots li.slick-active button:before {
-    color:White !important;
-}
-
-.bg-secondary-800{
-    background-color: #115E59;
-    color: #ffffff;
-}
-
-.bg-secondary-800:hover{
-    color: #ffffff;
+.stay-places-slider:hover button{
+    display: inline;
 }
