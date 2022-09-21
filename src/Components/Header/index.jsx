@@ -49,7 +49,7 @@ const MobileTabs = () => {
 
   return (
     <>
-      <div className="md:hidden bg-white shadow-lg fixed bottom-0 z-10 w-full p-2 overflow-x-hidden flex items-center justify-between md:justify-evenly text-gray-500 border">
+      <div className="md:hidden bg-white shadow-lg fixed bottom-0 z-40 w-full p-2 overflow-x-hidden flex items-center justify-between md:justify-evenly text-gray-500 border">
         {allTypes.map((item) => (
           <a key={item.id} to="/" className="w-1/4">
             <div
