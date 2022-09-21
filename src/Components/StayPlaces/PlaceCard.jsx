@@ -41,24 +41,25 @@ const PlaceCard = (props) => {
             pagination={{ clickable: true }}
             loop={true}
             autoplay
+            dot={'#fff'}
           >
             <SwiperSlide>
-              <div style={{ width: "294px" }}>
+              <div >
                 <img src={props.images[0]} alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div style={{ width: "294px" }}>
+              <div >
                 <img src={props.images[1]} alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div style={{ width: "294px" }}>
+              <div >
                 <img src={props.images[2]} alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div style={{ width: "294px" }}>
+              <div >
                 <img src={props.images[3]} alt="" />
               </div>
             </SwiperSlide>

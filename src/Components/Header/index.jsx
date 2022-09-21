@@ -8,6 +8,8 @@ import { GrSearch } from 'react-icons/gr'
 import {HiShare} from 'react-icons/hi'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import logo from '../../Assets/StayTrails/nav-logo.png'
+import Sidebar from "./Sidebar";
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 const navList = [
   "Home",
@@ -76,6 +78,10 @@ const MobileTabs = () => {
 };
 
 const LargeTabs = () => {
+  const [openNav, setOpenNav] = useState(false);
+
+  openNav ? disableBodyScroll(document) : enableBodyScroll(document)
+ 
   return (
     <div className="nc-Header bg-white fixed top-0 w-full left-0 right-0 z-40 shadow-sm">
       <div className="relative z-10 px-1">
@@ -131,7 +137,7 @@ const LargeTabs = () => {
           
           <div className="hidden md:flex flex items-center gap-4 ml-6 ">
             <div className="flex xl:hidden items-center">
-              <GiHamburgerMenu className="ml-2 cursor-pointer" size={24} />
+              <GiHamburgerMenu className="ml-2 cursor-pointer" size={24} onClick={()=> setOpenNav(true)} />
             </div>
             <div className="hidden xl:flex items-center space-x-0.5">
               <VscSearch className="mx-2 cursor-pointer"size={24} />
@@ -143,6 +149,12 @@ const LargeTabs = () => {
               </button>
               </div>
             </div>
+
+            {
+              openNav && (
+                <Sidebar show={()=> setOpenNav(true)} onHide={()=> setOpenNav(false)} />
+              )
+            }
 
         </div>
       </div>
