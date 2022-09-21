@@ -36,7 +36,7 @@ const SwiperComponent = (props) => {
           onSwiper={setSwiperRef}
           // modules={[Navigation]}
           spaceBetween={20}
-          slidesPerView={1}
+          slidesPerView={1.3}
           // navigation
           loop={true}
           breakpoints={{
