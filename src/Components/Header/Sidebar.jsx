@@ -10,7 +10,7 @@ const Sidebar = (props) => {
       <div className="fixed inset-0">
         <div className="flex justify-end min-h-full">
           <div className="w-full max-w-md overflow-hidden transition-all opacity-100 translate-x-0">
-            <div className="overflow-y-auto w-full h-screen py-2 transition transform shadow-lg ring-1 dark:ring-neutral-700 bg-white dark:bg-neutral-900 divide-y-2 divide-neutral-100">
+            <div className="overflow-y-auto w-full h-screen py-2 transition transform shadow-lg ring-1 bg-white divide-y-2 divide-neutral-100">
               <div className="py-6 px-5">
                 <a
                   href=""
@@ -80,6 +80,18 @@ const Sidebar = (props) => {
                   </a>
                 </li>
               </ul>
+              <div className="flex items-center justify-between py-6 px-6">
+                <a href="inline-block">
+                  <button className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-8 disabled:bg-opacity-70 bg-dark-gold hover:bg-light-gold text-neutral-50  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark-gold">Sign up</button>
+                </a>
+
+              <button
+                  className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base px-4 py-3 sm:px-6  font-medium border border-neutral-200 text-neutral-700 hover:text-neutral-50 hover:bg-light-gold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark-gold"
+                  type="button"
+                  >
+                  Become a host
+                </button>
+                  </div>
             </div>
           </div>
         </div>

@@ -31,8 +31,9 @@ const Reviews = () => {
       };
     
   return (
-    <div className='container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28 bg-gray-100 overflow-hidden'>
+    <div className='container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28'>
         <div className="relative py-16">
+            <div className="absolute inset-y-0 w-screen xl:max-w-[1340px] 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2 xl:rounded-[40px] z-0 bg-neutral-100"></div>
             <div className="relative">
                 <div className="relative flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-gray-900">
                     <div className="text-center w-full max-w-2xl mx-auto">

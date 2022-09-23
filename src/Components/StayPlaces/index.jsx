@@ -25,6 +25,7 @@ import img20 from "../../Assets/stay-slider/pexels-photo-3068519.jpeg";
 
 const StayPlaceslist = [
   {
+    badge: true,
     images: [img1, img2, img3, img4],
     beds: "10",
     title: "Best Western Cedars",
@@ -34,6 +35,7 @@ const StayPlaceslist = [
     total: "28",
   },
   {
+    badge: false,
     images: [img5, img6, img7, img8],
     beds: "6",
     title: "Bell By Greene King Inns",
@@ -43,6 +45,7 @@ const StayPlaceslist = [
     total: "198",
   },
   {
+    badge: false,
     images: [img9, img10, img11, img12],
     beds: "9",
     title: "Half Moon, Sherborne By Marnstone",
@@ -52,6 +55,7 @@ const StayPlaceslist = [
     total: "16",
   },
   {
+    badge: false,
     images: [img13, img14, img15, img16],
     beds: "7",
     title: "Best Western Cedars",
@@ -61,6 +65,7 @@ const StayPlaceslist = [
     total: "34",
   },
   {
+    badge: false,
     images: [img17, img18, img19, img20],
     beds: "3",
     title: "Ship and castle Hotel",
@@ -70,6 +75,7 @@ const StayPlaceslist = [
     total: "340",
   },
   {
+    badge: false,
     images: [img7, img12, img1, img3],
     beds: "7",
     title: "",
@@ -79,6 +85,7 @@ const StayPlaceslist = [
     total: "508",
   },
   {
+    badge: false,
     images: [img6, img11, img9, img14],
     beds: "2",
     title: "Best Western Cedars",
@@ -88,6 +95,7 @@ const StayPlaceslist = [
     total: "481",
   },
   {
+    badge: false,
     images: [img8, img12, img18, img1],
     beds: "7",
     title: "Best Western Cedars",
@@ -103,8 +111,9 @@ const StayPlaces = () => {
     const [active, setActive] = useState("1")
 
   return (
-    <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28 bg-gray-100">
+    <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
       <div className="relative py-16">
+        <div className="absolute inset-y-0 w-screen xl:max-w-[1340px] 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2 xl:rounded-[40px] z-0 bg-neutral-100"></div>
         <div className="flex flex-col mb-8">
           <div className="flex flex-col relative sm:flex-row sm:items-end justify-between mb-10 md:mb-12 ">
             <div className="max-w-2xl">
@@ -142,7 +151,7 @@ const StayPlaces = () => {
 
         <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
           {StayPlaceslist.map((places) => {
-            return <PlaceCard {...places} />;
+            return <PlaceCard {...places} aspect="" />
           })}
         </div>
       </div>

@@ -18,3 +18,36 @@
 .stay-places-slider:hover button{
     display: inline;
 }
+
+.place-card-slider-img{
+    width: auto;
+    /* height: auto; */
+}
+
+@media (min-width: 640px){
+    .place-card-slider-img{
+        width: 292px;
+        height: 292px;
+    }
+}
+
+@media (min-width: 768px){
+    .place-card-slider-img{
+        width: 352px;
+        height: 352px;
+    }
+}
+
+@media (min-width: 1024px){
+    .place-card-slider-img{
+        width: 209px;
+        height: 209px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .place-card-slider-img{
+        width: 395px;
+        height: 395px;
+    }
+}

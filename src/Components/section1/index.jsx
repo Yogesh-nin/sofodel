@@ -54,7 +54,7 @@ const Cities = () => {
             <h2 className='text-3xl md:text-4xl font-semibold'>Heading of Section</h2>
             <span className='mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400'>Description of section</span>
         </div>
-        <div className="">
+        <div className="relative">
           <SwiperComponent array={citylist} classes="w-224 h-314 md-w-232 md-h-325 sm-w-274 sm-h-219" noOfSlides={5} />
         </div>
 

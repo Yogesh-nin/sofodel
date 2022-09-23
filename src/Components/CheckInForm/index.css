@@ -1,0 +1,5 @@
+.field-focused:focus-within{
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgb(17 17 26 / 5%), 0 8px 32px rgb(17 17 26 / 5%);
+}
+

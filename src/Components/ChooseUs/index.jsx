@@ -3,8 +3,9 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import img from '../../Assets/BecomeAnAuthor.png'
 const ChooseUs = () => {
   return (
-    <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28 bg-gray-100">
+    <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
       <div className="relative py-16">
+        <div className="absolute inset-y-0 w-screen xl:max-w-[1340px] 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2 xl:rounded-[40px] z-0 bg-neutral-100 "></div>
         <div className="relative flex flex-col lg:flex-row items-center ">
           <div className="flex-shrink-0 mb-16 lg:mb-0 lg:mr-10 lg:w-2/5">
             <h2 className="font-semibold text-3xl sm:text-4xl mt-6 sm:mt-11">

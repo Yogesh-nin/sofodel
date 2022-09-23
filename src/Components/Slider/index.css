@@ -53,9 +53,9 @@
   width: 480px !important;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 640px) {
   .swiper-container {
-    width: 576px !important;
+    width: 640px !important;
   }
 }
 
@@ -65,8 +65,8 @@
   }
 }
 
-@media screen and (min-width: 996px) {
+@media screen and (min-width: 1024px) {
 .swiper-container{
-  width: 996px !important;
+  width: 1024px !important;
 }
 }

@@ -11,21 +11,25 @@ import NewsLetter from './Components/Newsletter';
 import ChooseUs from './Components/ChooseUs';
 import Reviews from './Components/Reviews';
 import StaysTypes from './Components/TypesStays';
+import Experience from './Components/Experience';
 
 function App() {
   return (
    <div>
       <Navbar />
-        <Hero />
+      <div className='homepage relative overflow-hidden'>
+      <Hero />
         <Cities />
-        {/* <Features /> */}
         <StayPlaces />
         <Section2 />
         <DiscoverySuggestion />
+        <Experience />
         <NewsLetter />
         <ChooseUs />
         <StaysTypes />
         <Reviews />
+      </div>
+        
       <Footer />
       
    </div>
