@@ -80,6 +80,7 @@ const LargeTabs = () => {
   openNav ? disableBodyScroll(document) : enableBodyScroll(document);
 
   return (
+    <div>
     <div className="nc-Header bg-white fixed top-0 w-full left-0 right-0 z-40 shadow-sm">
       <div className="relative z-10 px-1">
         <div className="px-4 container lg:container py-4 lg:py-5  relative flex  justify-around items-center">
@@ -180,6 +181,7 @@ const LargeTabs = () => {
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 };

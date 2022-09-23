@@ -4,7 +4,7 @@ import CheckInForm from '../CheckInForm'
 import './index.css'
 const Hero = () => {
   return (
-    <div className="container relative mt-20 space-y-24 mb-24 lg:space-y-28 lg:mb-28">
+    <div className="container relative mt-28  space-y-24 mb-24 lg:space-y-28 lg:mb-28">
       <div className='nc-SectionHero flex flex-col-reverse lg:flex-col relative pt-10 lg:pt-16 lg:pb-16'>
       <div className='flex flex-col lg:flex-row lg:items-center'>
         <div className='flex-shrink-0 lg:w-1/2 flex flex-col items-start space-y-8 sm:space-y-10 pb-14 lg:pb-64 xl:pr-14 lg:mr-10 xl:mr-0'>

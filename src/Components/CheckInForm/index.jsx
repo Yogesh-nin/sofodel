@@ -95,7 +95,7 @@ const initialDates = [
           </li>
         </ul>
         {active === "1" && (
-          <form className="w-full relative mt-8 flex flex-col md:flex-row  rounded-3xl md:rounded-full shadow-xl bg-white divide-y divide-neutral-200  md:divide-y-0">
+          <form className="w-full relative mt-8 flex rounded-full shadow-xl bg-white ">
             <div className="relative flex flex-[1.5]">
               <div className="relative flex flex-1 px-4 py-3 md:py-4 md:px-7 lg:py-6 lg:px-8 flex-shrink-0 items-center space-x-3 cursor-pointer focus:outline-none text-left field-focused ">
                 <div className="text-gray-300">

@@ -126,19 +126,19 @@ const StayPlaces = () => {
             </div>
           </div>
           <div className="flex items-center justify-between">
-            <nav className="relative flex w-full overflow-x-hidden text-sm md:text-base">
-              <ul className="flex sm:space-x-2">
+            <nav className="relative flex w-full text-sm md:text-base">
+              <ul className="flex sm:space-x-2 overflow-x-hidden">
                 <li className="relative" onClick={()=> setActive("1")}>
-                  <button className={`block px-3 !leading-none whitespace-nowrap font-medium py-3 text-sm sm:text-base xl:px-5 lg:py-2.5 hover:text-black rounded-full ${active === '1' ? 'bg-secondary-800' : ""} text-secondary-50 text-neutral-500  focus:outline-none`}>New Delhi</button>
+                  <button className={`block px-3 !leading-none whitespace-nowrap font-medium py-3 text-sm sm:text-base xl:px-5 lg:py-2.5 hover:text-black rounded-full ${active === '1' ? 'bg-light-gold text-gray-100' : ""} text-neutral-500  focus:outline-none`}>New Delhi</button>
                 </li>
                 <li className="relative" onClick={()=> setActive("2")}>
-                  <button className={`block !leading-none whitespace-nowrap font-medium px-3 py-3 text-sm sm:text-base lg:px-5 lg:py-2.5 rounded-full hover:text-black ${active === '2' ? 'bg-secondary-800' : ""} text-neutral-500 focus:outline-none`}>Agra</button>
+                  <button className={`block !leading-none whitespace-nowrap font-medium px-3 py-3 text-sm sm:text-base lg:px-5 lg:py-2.5 rounded-full hover:text-black ${active === '2' ? 'bg-light-gold text-gray-100' : ""} text-neutral-500 focus:outline-none`}>Agra</button>
                 </li>
                 <li className="relative" onClick={()=> setActive("3")}>
-                  <button className={`block px-3 !leading-none whitespace-nowrap font-medium py-3 text-sm sm:text-base hover:text-black lg:px-5 lg:py-2.5 rounded-full ${active === '3' ? 'bg-secondary-800' : ""} text-neutral-500 focus:outline-none`}>Mumbai</button>
+                  <button className={`block px-3 !leading-none whitespace-nowrap font-medium py-3 text-sm sm:text-base hover:text-black lg:px-5 lg:py-2.5 rounded-full ${active === '3' ? 'bg-light-gold text-gray-100' : ""} text-neutral-500 focus:outline-none`}>Mumbai</button>
                 </li>
                 <li className="relative" onClick={()=> setActive("4")}>
-                  <button className={`block !leading-none whitespace-nowrap font-medium px-3 py-3 text-sm sm:text-base lg:px-5 sm:py-2.5 hover:text-black rounded-full ${active === '4' ? 'bg-secondary-800' : ""} text-neutral-500 focus:outline-none`}>Kolkata</button>
+                  <button className={`block !leading-none whitespace-nowrap font-medium px-3 py-3 text-sm sm:text-base lg:px-5 sm:py-2.5 hover:text-black rounded-full ${active === '4' ? 'bg-light-gold text-gray-100' : ""} text-neutral-500 focus:outline-none`}>Kolkata</button>
                 </li>
               </ul>
             </nav>
