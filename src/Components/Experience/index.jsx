@@ -1,6 +1,6 @@
 import React from 'react'
 import PlaceCard from './PlaceCard';
-import { m, LazyMotion, domAnimation, useAnimation } from 'framer-motion'
+import { m, LazyMotion, domAnimation } from 'framer-motion'
 import img1 from '../../Assets/StayTrails/Experience/38d6b5ea-abcc-4876-acb4-e5b79586c37c.jpeg'
 import img2 from '../../Assets/StayTrails/Experience/pexels-photo-1094794.jpeg'
 import img3 from '../../Assets/StayTrails/Experience/pexels-photo-1637451.jpeg'
