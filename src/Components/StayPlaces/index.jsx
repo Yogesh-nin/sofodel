@@ -229,7 +229,7 @@ const StayPlaces = () => {
           </div>
           <div className="flex items-center justify-between">
             <nav className="relative flex w-full text-sm md:text-base">
-              <ul className="flex sm:space-x-2 overflow-x-hidden">
+              <ul className="flex sm:space-x-2 overflow-x-auto">
                 <li className="relative" onClick={() => setActive("New Delhi")}>
                   <button
                     className={`block px-3 !leading-none whitespace-nowrap font-medium py-3 text-sm sm:text-base xl:px-5 lg:py-2.5 hover:text-black rounded-full ${
