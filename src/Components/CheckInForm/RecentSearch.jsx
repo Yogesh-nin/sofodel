@@ -36,7 +36,7 @@ const RecentSearch = (props) => {
                         <BsClock />
                     </span>
                     <span className="block font-medium text-neutral-700 ">
-                    Hamptons, Suffolk County, NY
+                    Dwarka Sector-19, New Delhi
                     </span>
                 </span>
                 <span className="flex px-4 sm:px-8 items-center space-x-3 sm:space-x-4 py-4 sm:py-5 hover:bg-neutral-100  cursor-pointer">
@@ -44,7 +44,7 @@ const RecentSearch = (props) => {
                         <BsClock />
                     </span>
                     <span className="block font-medium text-neutral-700 ">
-                    Hamptons, Suffolk County, NY
+                    Kanpur, Uttar Pradesh
                     </span>
                 </span>
                 <span className="flex px-4 sm:px-8 items-center space-x-3 sm:space-x-4 py-4 sm:py-5 hover:bg-neutral-100  cursor-pointer">
@@ -52,7 +52,7 @@ const RecentSearch = (props) => {
                         <BsClock />
                     </span>
                     <span className="block font-medium text-neutral-700 ">
-                    Hamptons, Suffolk County, NY
+                    Mumbai, Maharashtra
                     </span>
                 </span>
                 <span className="flex px-4 sm:px-8 items-center space-x-3 sm:space-x-4 py-4 sm:py-5 hover:bg-neutral-100  cursor-pointer">
@@ -60,7 +60,7 @@ const RecentSearch = (props) => {
                         <BsClock />
                     </span>
                     <span className="block font-medium text-neutral-700 ">
-                    Hamptons, Suffolk County, NY
+                    Vizag, Andhra Pradesh
                     </span>
                 </span>
                 

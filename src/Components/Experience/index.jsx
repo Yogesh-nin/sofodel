@@ -1,5 +1,6 @@
 import React from 'react'
 import PlaceCard from './PlaceCard';
+import { m, LazyMotion, domAnimation, useAnimation } from 'framer-motion'
 import img1 from '../../Assets/StayTrails/Experience/38d6b5ea-abcc-4876-acb4-e5b79586c37c.jpeg'
 import img2 from '../../Assets/StayTrails/Experience/pexels-photo-1094794.jpeg'
 import img3 from '../../Assets/StayTrails/Experience/pexels-photo-1637451.jpeg'
@@ -77,7 +78,32 @@ const experienceList = [
       },
 ]
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 50, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8
+    }
+  },
+};
+
+
 const Experience = () => {
+
+  
   return (
     <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
       <div className="relative py-16">
@@ -85,7 +111,7 @@ const Experience = () => {
           <div className="flex flex-col relative sm:flex-row sm:items-end justify-between mb-10 md:mb-12 ">
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-semibold">
-                Experience in Mumbai
+                Popular Experiences
               </h2>
               
               <span className="block text-neutral-500 mt-3">
@@ -99,12 +125,15 @@ const Experience = () => {
             </div>
           </div>
         </div>
-
-        <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+        <LazyMotion features={domAnimation}>
+        <m.ul className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" variants={container}
+            initial="hidden" whileInView="visible" viewport={{ once: true }}
+            >
           {experienceList.map((places) => {
-            return <PlaceCard {...places} aspect="aspect-square" />;
+            return <m.li variants={item}><PlaceCard {...places} aspect="aspect-square" /></m.li>
           })}
-        </div>
+        </m.ul>
+        </LazyMotion>
       </div>
     </div>
   )

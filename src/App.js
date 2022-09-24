@@ -21,13 +21,11 @@ function App() {
       <Hero />
         <Cities />
         <StayPlaces />
-        <Section2 />
-        <DiscoverySuggestion />
         <Experience />
-        <NewsLetter />
+        <Section2 />
         <ChooseUs />
-        <StaysTypes />
         <Reviews />
+        <NewsLetter />
       </div>
         
       <Footer />

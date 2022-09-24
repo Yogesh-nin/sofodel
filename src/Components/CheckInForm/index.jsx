@@ -72,8 +72,8 @@ const initialDates = [
   console.log(dates[0].startDate + " date");
 
   return (
-    <div className="hidden lg:block z-10 mb-12 lg:mb-0 lg:-mt-40 w-full">
-      <div className="w-full max-w-6xl py-5 lg:py-0 ">
+    <div className="hidden lg:block z-10 mb-12 lg:mb-0 lg:-mt-40 w-full" id="searchBox">
+      <div className="w-full max-w-6xl py-5 lg:py-0">
         <ul className="ml-2 sm:ml-6 md:ml-12 flex space-x-5 sm:space-x-8 lg:space-x-11 overflow-x-auto">
           <li
             className={`flex-shrink-0 flex items-center cursor-pointer text-sm lg:text-base font-medium hover:bg-slate-200 px-4 py-2 rounded-3xl ${
@@ -98,7 +98,7 @@ const initialDates = [
           <form className="w-full relative mt-8 flex rounded-full shadow-xl bg-white ">
             <div className="relative flex flex-[1.5]">
               <div className="relative flex flex-1 px-4 py-3 md:py-4 md:px-7 lg:py-6 lg:px-8 flex-shrink-0 items-center space-x-3 cursor-pointer focus:outline-none text-left field-focused ">
-                <div className="text-gray-300">
+                <div className="text-dark-gold">
                   <FaMapMarkerAlt size={42} />
                 </div>
                 <div
@@ -125,7 +125,7 @@ const initialDates = [
               <div className="absolute inset-0 flex ">
                 <div className="flex-1 grid grid-cols-2 relative">
                   <div className="relative px-4 py-3 md:py-4 md:px-7 lg:py-6 lg:px-8 flex items-center space-x-3 cursor-pointer field-focused">
-                    <div className="text-neutral-300 dark:text-neutral-400">
+                    <div className="text-dark-gold">
                       <MdDateRange size={42} />
                     </div>
                     <div className="flex-1">
@@ -147,7 +147,7 @@ const initialDates = [
                     </div>
                   </div>
                   <div className="relative px-4 py-3 md:py-4 md:px-7 lg:py-6 lg:px-8 flex items-center space-x-3 cursor-pointer field-focused">
-                    <div className="text-neutral-300">
+                    <div className="text-dark-gold">
                       <MdDateRange size={42} />
                     </div>
                     <div className="flex-1 flex text-left items-center space-x-3">
@@ -239,7 +239,7 @@ const initialDates = [
                   type="button"
                   className="flex-1 flex text-left items-center space-x-3 px-4 py-3 md:py-4 md:px-7 lg:py-6 lg:px-8"
                 >
-                  <div className="text-gray-300 dark:text-gray-400">
+                  <div className="text-dark-gold">
                     <BiUserPlus size={42} />
                   </div>
 
@@ -292,7 +292,7 @@ const initialDates = [
           >
             <div className="relative flex flex-[1.5]">
               <div className="relative flex flex-1 px-4 py-3 md:py-4 md:px-7 lg:py-6 lg:px-8 flex-shrink-0 items-center space-x-3 cursor-pointer focus:outline-none text-left field-focused ">
-                <div className="text-gray-300">
+                <div className="text-dark-gold">
                   <FaMapMarkerAlt size={42} />
                 </div>
                 <div
@@ -316,7 +316,7 @@ const initialDates = [
             </div>
             <div className="relative flex flex-1">
               <div className="px-4 py-3 md:py-4 md:px-7 lg:py-6 lg:px-8 flex-1 flex relative items-center space-x-3 cursor-pointer field-focused">
-                <div className="text-gray-300">
+                <div className="text-dark-gold">
                   <MdDateRange size={42} />
                 </div>
                 <div className="flex-grow">
@@ -345,7 +345,7 @@ const initialDates = [
                   type="button"
                   className="flex-1 flex text-left items-center space-x-3 px-4 py-3 md:py-4 md:px-7 lg:py-6 lg:px-8"
                 >
-                  <div className="text-gray-300 dark:text-gray-400">
+                  <div className="text-dark-gold">
                     <BiUserPlus size={42} />
                   </div>
 

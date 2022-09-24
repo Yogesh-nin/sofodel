@@ -23,6 +23,10 @@
   height: 331px;
 }
 
+.hover-element:hover{
+  opacity: 0.1 !important;
+}
+
 @media (max-width: 996px){
   .md-w-232{
     width: 232px;

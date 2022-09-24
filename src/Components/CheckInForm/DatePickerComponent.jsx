@@ -11,9 +11,7 @@ const [date, setDate]  = useState("")
       <DatePicker
       className="w-full sm:min-w-[340px] max-w-sm"
       wrapperClassName="datePicker"
-        mask="__-__"
-        dateFormat="dd, MM"
-        format="dd, MM"
+       dateFormat="dd/MM/yyyy"
         minDate={new Date()}
         selected={date}
         onChange={(date) => setDate(date)}

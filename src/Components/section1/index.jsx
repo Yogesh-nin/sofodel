@@ -51,11 +51,11 @@ const Cities = () => {
   return (
     <div className='container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28'>
         <div className="relative flex flex-col mb-12 lg:mb-16">
-            <h2 className='text-3xl md:text-4xl font-semibold'>Heading of Section</h2>
-            <span className='mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400'>Description of section</span>
+            <h2 className='text-3xl md:text-4xl font-semibold'>Top Destination</h2>
+            <span className='mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400'>Your favorite top destination</span>
         </div>
         <div className="relative">
-          <SwiperComponent array={citylist} classes="w-224 h-314 md-w-232 md-h-325 sm-w-274 sm-h-219" noOfSlides={5} />
+          <SwiperComponent array={citylist} classes=" h-314 md-w-232 md-h-325 sm-w-274 sm-h-219" noOfSlides={5} />
         </div>
 
     </div>

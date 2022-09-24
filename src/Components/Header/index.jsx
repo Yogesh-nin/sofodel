@@ -150,6 +150,12 @@ const LargeTabs = () => {
               />
             </div>
             <div className="hidden xl:flex items-center space-x-0.5">
+            <span className="">
+                <VscSearch className="mx-2 cursor-pointer" size={24} />
+              </span>
+              <span className="hover:bg-slate-200 px-2 py-2 rounded-full">
+                <AiOutlineHeart className="mx-2 cursor-pointer" size={24} />
+              </span>
               <span className="hover:bg-slate-200 px-2 py-2 rounded-full">
                 <AiOutlineShoppingCart
                   className="mx-2 cursor-pointer"
@@ -157,13 +163,9 @@ const LargeTabs = () => {
                 />
               </span>
 
-              <span className="hover:bg-slate-200 px-2 py-2 rounded-full">
-                <AiOutlineHeart className="mx-2 cursor-pointer" size={24} />
-              </span>
+              
 
-              <span className="">
-                <VscSearch className="mx-2 cursor-pointer" size={24} />
-              </span>
+              
               <button
                 className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  disabled:bg-opacity-70 bg-dark-gold hover:bg-light-gold text-gray-50  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark-gold"
                 type="button"

@@ -41,7 +41,7 @@ const Reviews = () => {
                             Good news from far away
                         </h2>
                         <span className="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-gray-500">
-                            Let's see what people think of Chisfis
+                            Let's see what people think of stayTrials
                         </span>
                     </div>
                 </div>
@@ -61,15 +61,15 @@ const Reviews = () => {
 
                         <Slider {...settings}>
                             <div className="flex flex-col items-center text-center">
-                                <span className="block text-2xl">This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!</span>
+                                <span className="block text-2xl">This place is exactly like the picture posted on stayTrials. Great service, we had a great stay!</span>
                                 <span className="block mt-8 text-2xl font-semibold">Lennie Swiffen</span>
                             </div>
                             <div className="flex flex-col items-center text-center">
-                                <span className="block text-2xl">This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!</span>
+                                <span className="block text-2xl">This place is exactly like the picture posted on stayTrials. Great service, we had a great stay!</span>
                                 <span className="block mt-8 text-2xl font-semibold">Tiana Abie</span>
                             </div>
                             <div className="flex flex-col items-center text-center">
-                                <span className="block text-2xl">This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!</span>
+                                <span className="block text-2xl">This place is exactly like the picture posted on stayTrials. Great service, we had a great stay!</span>
                                 <span className="block mt-8 text-2xl font-semibold">Berta emili</span>
                             </div>
                         </Slider>

@@ -21,7 +21,7 @@ const Features = () => {
             </li>
             <li className="space-y-4">
               <span className='inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-green-800 bg-green-100  relative'>Exposure</span>
-              <span className='block text-xl font-semibold'>Reach millions with chisfis</span>
+              <span className='block text-xl font-semibold'>Reach millions with stayTrails</span>
               <span className='block mt-4 text-gray-500'>Millions of people are searching for unique places to stay around the world</span>
             </li>
             <li className="space-y-4">

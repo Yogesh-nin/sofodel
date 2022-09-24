@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import PlaceCard from "./PlaceCard";
-import { HiArrowNarrowRight} from 'react-icons/hi'
+import { HiArrowNarrowRight } from "react-icons/hi";
+import { LazyMotion, domAnimation, m } from "framer-motion"
 
 import img1 from "../../Assets/stay-slider/img1.jpeg";
 import img2 from "../../Assets/stay-slider/img2.jpeg";
@@ -22,6 +23,7 @@ import img17 from "../../Assets/stay-slider/pexels-photo-2736187.jpeg";
 import img18 from "../../Assets/stay-slider/pexels-photo-276746.jpeg";
 import img19 from "../../Assets/stay-slider/pexels-photo-2983472.jpeg";
 import img20 from "../../Assets/stay-slider/pexels-photo-3068519.jpeg";
+import Pagination from "./Pagination";
 
 const StayPlaceslist = [
   {
@@ -33,6 +35,7 @@ const StayPlaceslist = [
     rate: "26",
     star: "4.8",
     total: "28",
+    city: "New Delhi",
   },
   {
     badge: false,
@@ -43,6 +46,7 @@ const StayPlaceslist = [
     rate: "250",
     star: "4.4",
     total: "198",
+    city: "Mumbai",
   },
   {
     badge: false,
@@ -53,6 +57,7 @@ const StayPlaceslist = [
     rate: "278",
     star: "3.6",
     total: "16",
+    city: "Agra",
   },
   {
     badge: false,
@@ -63,6 +68,7 @@ const StayPlaceslist = [
     rate: "40",
     star: "4.8",
     total: "34",
+    city: "kolkata",
   },
   {
     badge: false,
@@ -73,6 +79,7 @@ const StayPlaceslist = [
     rate: "147",
     star: "3.4",
     total: "340",
+    city: "Mumbai",
   },
   {
     badge: false,
@@ -83,6 +90,18 @@ const StayPlaceslist = [
     rate: "90",
     star: "3.8",
     total: "508",
+    city: "Kolkata",
+  },
+  {
+    badge: false,
+    images: [img13, img14, img15, img16],
+    beds: "7",
+    title: "Best Western Cedars",
+    location: "35 Sherman Park",
+    rate: "40",
+    star: "4.8",
+    total: "34",
+    city: "kolkata",
   },
   {
     badge: false,
@@ -93,6 +112,7 @@ const StayPlaceslist = [
     rate: "282",
     star: "3",
     total: "481",
+    city: "Agra",
   },
   {
     badge: false,
@@ -103,12 +123,94 @@ const StayPlaceslist = [
     rate: "79",
     star: "3.9",
     total: "188",
+    city: "New Delhi",
+  },
+  {
+    badge: false,
+    images: [img6, img11, img9, img14],
+    beds: "2",
+    title: "Best Western Cedars",
+    location: "79361 Chinook Place",
+    rate: "282",
+    star: "3",
+    total: "481",
+    city: "Agra",
+  },
+  {
+    badge: false,
+    images: [img8, img12, img18, img1],
+    beds: "7",
+    title: "Best Western Cedars",
+    location: "6 Chive Avenue",
+    rate: "79",
+    star: "3.9",
+    total: "188",
+    city: "New Delhi",
+  },
+  {
+    badge: false,
+    images: [img5, img6, img7, img8],
+    beds: "6",
+    title: "Bell By Greene King Inns",
+    location: "32923 Judy Hill",
+    rate: "250",
+    star: "4.4",
+    total: "198",
+    city: "Mumbai",
+  },
+
+  {
+    badge: false,
+    images: [img6, img11, img9, img14],
+    beds: "2",
+    title: "Best Western Cedars",
+    location: "79361 Chinook Place",
+    rate: "282",
+    star: "3",
+    total: "481",
+    city: "Kolkata",
   },
 ];
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.2,
+      staggerChildren: 0.7,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 50, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8
+    }
+  },
+};
+
+
+
 
 const StayPlaces = () => {
-    const [active, setActive] = useState("1")
+  const [active, setActive] = useState("New Delhi");
+  const [activeArray, setActiveArray] = useState([]);
+
+  useEffect(() => {
+    setActiveArray([]);
+    StayPlaceslist.map((places) => {
+      if (places.city === active) {
+        setActiveArray((prev) => [...prev, places]);
+      }
+    });
+    console.log(activeArray);
+  }, [active]);
 
   return (
     <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
@@ -118,42 +220,104 @@ const StayPlaces = () => {
           <div className="flex flex-col relative sm:flex-row sm:items-end justify-between mb-10 md:mb-12 ">
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-semibold">
-                Featured places to stay
+                Featured properties to stay
               </h2>
               <span className="mt-2 md:mt-4 font-normal block text-base sm:text-lg text-neutral-500 dark:text-neutral-400">
-                Popular places to stay that Chisfis recommends for you
+                Popular places to stay that StayTrails recommends for you
               </span>
             </div>
           </div>
           <div className="flex items-center justify-between">
             <nav className="relative flex w-full text-sm md:text-base">
               <ul className="flex sm:space-x-2 overflow-x-hidden">
-                <li className="relative" onClick={()=> setActive("1")}>
-                  <button className={`block px-3 !leading-none whitespace-nowrap font-medium py-3 text-sm sm:text-base xl:px-5 lg:py-2.5 hover:text-black rounded-full ${active === '1' ? 'bg-light-gold text-gray-100' : ""} text-neutral-500  focus:outline-none`}>New Delhi</button>
+                <li className="relative" onClick={() => setActive("New Delhi")}>
+                  <button
+                    className={`block px-3 !leading-none whitespace-nowrap font-medium py-3 text-sm sm:text-base xl:px-5 lg:py-2.5 hover:text-black rounded-full ${
+                      active === "New Delhi"
+                        ? "bg-light-gold text-gray-100"
+                        : ""
+                    } text-neutral-500  focus:outline-none`}
+                  >
+                    New Delhi
+                  </button>
                 </li>
-                <li className="relative" onClick={()=> setActive("2")}>
-                  <button className={`block !leading-none whitespace-nowrap font-medium px-3 py-3 text-sm sm:text-base lg:px-5 lg:py-2.5 rounded-full hover:text-black ${active === '2' ? 'bg-light-gold text-gray-100' : ""} text-neutral-500 focus:outline-none`}>Agra</button>
+                <li className="relative" onClick={() => setActive("Agra")}>
+                  <button
+                    className={`block !leading-none whitespace-nowrap font-medium px-3 py-3 text-sm sm:text-base lg:px-5 lg:py-2.5 rounded-full hover:text-black ${
+                      active === "Agra" ? "bg-light-gold text-gray-100" : ""
+                    } text-neutral-500 focus:outline-none`}
+                  >
+                    Agra
+                  </button>
                 </li>
-                <li className="relative" onClick={()=> setActive("3")}>
-                  <button className={`block px-3 !leading-none whitespace-nowrap font-medium py-3 text-sm sm:text-base hover:text-black lg:px-5 lg:py-2.5 rounded-full ${active === '3' ? 'bg-light-gold text-gray-100' : ""} text-neutral-500 focus:outline-none`}>Mumbai</button>
+                <li className="relative" onClick={() => setActive("Mumbai")}>
+                  <button
+                    className={`block px-3 !leading-none whitespace-nowrap font-medium py-3 text-sm sm:text-base hover:text-black lg:px-5 lg:py-2.5 rounded-full ${
+                      active === "Mumbai" ? "bg-light-gold text-gray-100" : ""
+                    } text-neutral-500 focus:outline-none`}
+                  >
+                    Mumbai
+                  </button>
                 </li>
-                <li className="relative" onClick={()=> setActive("4")}>
-                  <button className={`block !leading-none whitespace-nowrap font-medium px-3 py-3 text-sm sm:text-base lg:px-5 sm:py-2.5 hover:text-black rounded-full ${active === '4' ? 'bg-light-gold text-gray-100' : ""} text-neutral-500 focus:outline-none`}>Kolkata</button>
+                <li className="relative" onClick={() => setActive("Kolkata")}>
+                  <button
+                    className={`block !leading-none whitespace-nowrap font-medium px-3 py-3 text-sm sm:text-base lg:px-5 sm:py-2.5 hover:text-black rounded-full ${
+                      active === "Kolkata" ? "bg-light-gold text-gray-100" : ""
+                    } text-neutral-500 focus:outline-none`}
+                  >
+                    Kolkata
+                  </button>
                 </li>
               </ul>
             </nav>
 
             <span className="hidden sm:block flex-shrink-0">
-                <button className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base px-4 py-3 sm:px-6 font-medium border bg-white border-neutral-200 text-gray-900 hover:bg-gray-100 !leading-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">View all <span><HiArrowNarrowRight /></span></button>
+              <button
+                className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base px-4 py-3 sm:px-6 font-medium border bg-white border-neutral-200 text-gray-900 hover:bg-gray-100 !leading-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"
+                onClick={() => setActive("view all")}
+              >
+                View all{" "}
+                <span>
+                  <HiArrowNarrowRight />
+                </span>
+              </button>
             </span>
           </div>
         </div>
 
-        <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+        {active !== "view all" && (
+           <LazyMotion features={domAnimation}>
+          <m.ul
+          // ref={ref}
+            className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 transition transform"
+            style={{ minHeight: "22rem" }}
+            variants={container}
+            initial="hidden"
+              animate="visible"
+          >
+              {activeArray.map((places) => {
+                if (places.city === active)
+                  return <m.li variants={item} ><PlaceCard {...places} aspect=""  /></m.li>
+              })}
+            </m.ul>
+            </LazyMotion>
+        )}
+
+        {active === "view all" && (
+          <LazyMotion features={domAnimation}>
+            <Pagination container={container} item={item} itemsPerPage={8} array={StayPlaceslist} />
+
+          </LazyMotion>
+        )}
+
+        {/* <Pagination itemsPerPage={8} array={activeArray} /> */}
+
+        {/* <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
           {StayPlaceslist.map((places) => {
-            return <PlaceCard {...places} aspect="" />
+            if(places.city === active)
+              return <PlaceCard {...places} aspect="" />
           })}
-        </div>
+        </div> */}
       </div>
     </div>
   );

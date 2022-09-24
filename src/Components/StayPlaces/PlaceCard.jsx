@@ -24,7 +24,7 @@ const PlaceCard = (props) => {
   }, [swiperRef]);
 
   return (
-    <div className="relative bg-white border rounded-2xl overflow-hidden will-change-transform hover:shadow-xl transition-shadow ">
+    <div className="relative bg-white border rounded-2xl overflow-hidden transition will-change-transform hover:shadow-xl ">
       <div className="relative w-full">
         <div className="relative stay-places-slider">
           <button
