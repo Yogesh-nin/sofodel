@@ -17,7 +17,7 @@ function App() {
   return (
    <div>
       <Navbar />
-      <div className='homepage relative overflow-hidden'>
+      <div className='homepage relative overflow-x-hidden'>
       <Hero />
         <Cities />
         <StayPlaces />
@@ -26,9 +26,9 @@ function App() {
         <ChooseUs />
         <Reviews />
         <NewsLetter />
+      <Footer />
       </div>
         
-      <Footer />
       
    </div>
   );

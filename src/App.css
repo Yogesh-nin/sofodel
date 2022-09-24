@@ -1,7 +1,9 @@
 
 .container{
-  padding-left: 15px;
-  padding-right: 15px;
+  /* padding-left: 15px;
+  padding-right: 15px; */
+  width: 100%;
+  overflow-x: hidden;
 }
 
 @media (min-width: 640px) {

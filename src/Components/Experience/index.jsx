@@ -126,13 +126,13 @@ const Experience = () => {
           </div>
         </div>
         <LazyMotion features={domAnimation}>
-        <m.ul className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" variants={container}
-            initial="hidden" whileInView="visible" viewport={{ once: true }}
+        <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" variants={container}
+            initial="hidden" animate="visible"
             >
           {experienceList.map((places) => {
-            return <m.li variants={item}><PlaceCard {...places} aspect="aspect-square" /></m.li>
+            return <PlaceCard {...places} aspect="aspect-square" />
           })}
-        </m.ul>
+        </div>
         </LazyMotion>
       </div>
     </div>
