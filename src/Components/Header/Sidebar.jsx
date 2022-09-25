@@ -1,10 +1,12 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import { MdClose } from "react-icons/md";
 import { RiFacebookBoxLine, RiInstagramLine, RiTwitterFill, RiYoutubeLine } from "react-icons/ri";
 import logo from "../../Assets/StayTrails/nav-logo.png";
 
 const Sidebar = (props) => {
   return (
+    <Fade>
     <div className="relative z-50 overflow-hidden">
         <div className="fixed inset-0 bg-neutral-900 bg-opacity-50 opacity-100"></div>
       <div className="fixed inset-0">
@@ -97,6 +99,7 @@ const Sidebar = (props) => {
         </div>
       </div>
     </div>
+    </Fade>
   );
 };
 

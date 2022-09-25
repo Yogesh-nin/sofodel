@@ -15,6 +15,7 @@ import {
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const navList = ["Home", "About", "Properties", "Experience", "Contact us"];
 

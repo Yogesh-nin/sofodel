@@ -6,6 +6,7 @@ import banglore from '../../Assets/StayTrails/Locaton/banglore.jpg'
 import kolkata from '../../Assets/StayTrails/Locaton/kolkata.jpg'
 import chennai from '../../Assets/StayTrails/Locaton/Chennai_Central.jpg'
 import SwiperComponent from '../Slider/SwiperComponent';
+import { Fade } from 'react-awesome-reveal'
 
 const citylist = [
   {
@@ -50,6 +51,7 @@ const citylist = [
 const Cities = () => {
   return (
     <div className='container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28'>
+      <Fade cascade triggerOnce='true'>
         <div className="relative flex flex-col mb-12 lg:mb-16">
             <h2 className='text-3xl md:text-4xl font-semibold'>Top Destination</h2>
             <span className='mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400'>Your favorite top destination</span>
@@ -57,7 +59,7 @@ const Cities = () => {
         <div className="relative">
           <SwiperComponent array={citylist} classes=" h-314 md-w-232 md-h-325 sm-w-274 sm-h-219" noOfSlides={5} />
         </div>
-
+        </Fade>
     </div>
   )
 }

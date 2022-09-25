@@ -1,10 +1,12 @@
 import React from 'react'
+import { Fade } from 'react-awesome-reveal'
 import img1 from '../../Assets/HIW1.bbef046fd6951afd08a7.png'
 import img2 from '../../Assets/HIW2.f68577684c76e764a351.png'
 import img3 from '../../Assets/HIW3.b650d652a9db697619b9.png'
 const Section2 = () => {
   return (
     <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
+        <Fade cascade damping={0.1} triggerOnce='true'>
         <div className="relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 lg:mb-15 text-neutral-900 dark:text-neutral-50">
             <div className="text-center w-full max-w-2xl mx-auto">
                 <h2 className='text-3xl md:text-4xl font-semibold text-black'>How it works ?</h2>
@@ -40,6 +42,7 @@ const Section2 = () => {
                 </div>
             </div>
         </div>
+        </Fade>
     </div>
   )
 }

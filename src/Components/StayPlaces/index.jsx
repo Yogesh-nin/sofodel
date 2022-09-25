@@ -85,7 +85,7 @@ const StayPlaceslist = [
     badge: false,
     images: [img7, img12, img1, img3],
     beds: "7",
-    title: "",
+    title: "Bell By Greene King Inns",
     location: "55974 Waxwing Junction",
     rate: "90",
     star: "3.8",
@@ -197,6 +197,7 @@ const StayPlaces = () => {
       <div className="relative py-16">
         <div className="absolute inset-y-0 w-screen xl:max-w-[1340px] 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2 xl:rounded-[40px] z-0 bg-neutral-100"></div>
         <div className="flex flex-col mb-8">
+          <Fade cascade damping={0.1} triggerOnce='true'>
           <div className="flex flex-col relative sm:flex-row sm:items-end justify-between mb-10 md:mb-12 ">
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-semibold">
@@ -263,6 +264,7 @@ const StayPlaces = () => {
               </button>
             </span>
           </div>
+          </Fade>
         </div>
 
         {active !== "view all" && (

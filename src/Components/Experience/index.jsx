@@ -86,9 +86,11 @@ const Experience = () => {
   return (
     <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
       <div className="relative py-16">
+        
         <div className="flex flex-col mb-8">
           <div className="flex flex-col relative sm:flex-row sm:items-end justify-between mb-10 md:mb-12 ">
             <div className="max-w-2xl">
+            <Fade cascade damping={0.1} triggerOnce='true'>
               <h2 className="text-3xl md:text-4xl font-semibold">
                 Popular Experiences
               </h2>
@@ -101,6 +103,7 @@ const Experience = () => {
                 2 Guests
 
               </span>
+              </Fade>
             </div>
           </div>
         </div>
