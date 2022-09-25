@@ -266,7 +266,7 @@ const StayPlaces = () => {
         </div>
 
         {active !== "view all" && (
-          <Fade cascade damping={0.1}>
+          <Fade cascade damping={0.1} triggerOnce='true'>
           <ul
           // ref={ref}
             className="hidden sm:grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 transition transform"
