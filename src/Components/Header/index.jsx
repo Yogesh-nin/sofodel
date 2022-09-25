@@ -89,10 +89,10 @@ const LargeTabs = () => {
             <div className="flex items-center">
               <a
                 href="/"
-                className="inline-block text-indigo-6000 focus:outline-none focus:ring-0 w-24"
+                className="inline-block focus:outline-none focus:ring-0 w-28"
               >
                 <div className="">
-                  <img src={logo} alt="" className="" />
+                  <img src={logo} alt="" className="w-full h-full object-cover" />
                 </div>
               </a>
 

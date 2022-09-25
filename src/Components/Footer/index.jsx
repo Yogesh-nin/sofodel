@@ -16,10 +16,10 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <a
               href="/"
-              className="inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24"
+              className="inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24 sm:w-28"
             >
               <div className="">
-                <img src={logo} alt="" className="" />
+                <img src={logo} alt="" className="cover-object w-full h-full" />
               </div>
             </a>
           </div>
