@@ -1,6 +1,5 @@
 import React from 'react'
 import PlaceCard from './PlaceCard';
-import { m, LazyMotion, domAnimation } from 'framer-motion'
 import img1 from '../../Assets/StayTrails/Experience/38d6b5ea-abcc-4876-acb4-e5b79586c37c.jpeg'
 import img2 from '../../Assets/StayTrails/Experience/pexels-photo-1094794.jpeg'
 import img3 from '../../Assets/StayTrails/Experience/pexels-photo-1637451.jpeg'
@@ -9,6 +8,7 @@ import img5 from '../../Assets/StayTrails/Experience/pexels-photo-3061217.jpeg'
 import img6 from '../../Assets/StayTrails/Experience/pexels-photo-4253300.jpeg'
 import img7 from '../../Assets/StayTrails/Experience/pexels-photo-5560867.jpeg'
 import img8 from '../../Assets/StayTrails/Experience/pexels-photo-6455686.jpeg'
+import { Fade } from 'react-awesome-reveal';
 const experienceList = [
     {
         images: [img1, img1, img1, img1],
@@ -78,27 +78,6 @@ const experienceList = [
       },
 ]
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const item = {
-  hidden: { y: 50, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.8
-    }
-  },
-};
 
 
 const Experience = () => {
@@ -125,15 +104,24 @@ const Experience = () => {
             </div>
           </div>
         </div>
-        <LazyMotion features={domAnimation}>
-        <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" variants={container}
-            initial="hidden" animate="visible"
+        <Fade cascade damping={0.1}>
+        <ul className="hidden sm:grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            >
+          {experienceList.map((places) => {
+            return <PlaceCard {...places} aspect="aspect-square" />
+          })}
+        </ul>
+        </Fade>
+
+        {/* No animation in small screens */}
+
+        <div className="sm:hidden grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
             >
           {experienceList.map((places) => {
             return <PlaceCard {...places} aspect="aspect-square" />
           })}
         </div>
-        </LazyMotion>
+
       </div>
     </div>
   )

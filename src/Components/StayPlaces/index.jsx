@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PlaceCard from "./PlaceCard";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { LazyMotion, domAnimation, m } from "framer-motion"
 
 import img1 from "../../Assets/stay-slider/img1.jpeg";
 import img2 from "../../Assets/stay-slider/img2.jpeg";
@@ -24,6 +23,7 @@ import img18 from "../../Assets/stay-slider/pexels-photo-276746.jpeg";
 import img19 from "../../Assets/stay-slider/pexels-photo-2983472.jpeg";
 import img20 from "../../Assets/stay-slider/pexels-photo-3068519.jpeg";
 import Pagination from "./Pagination";
+import { Fade } from "react-awesome-reveal";
 
 const StayPlaceslist = [
   {
@@ -172,36 +172,12 @@ const StayPlaceslist = [
   },
 ];
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.2,
-      staggerChildren: 0.7,
-    },
-  },
-};
-
-const item = {
-  hidden: { y: 50, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.8
-    }
-  },
-};
-
 
 
 
 const StayPlaces = () => {
   const [active, setActive] = useState("New Delhi");
   const [activeArray, setActiveArray] = useState([]);
-
   useEffect(() => {
     setActiveArray([]);
     StayPlaceslist.map((places) => {
@@ -210,7 +186,11 @@ const StayPlaces = () => {
       }
     });
     console.log(activeArray);
+
   }, [active]);
+
+  
+
 
   return (
     <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
@@ -286,28 +266,38 @@ const StayPlaces = () => {
         </div>
 
         {active !== "view all" && (
-           <LazyMotion features={domAnimation}>
-          <div
+          <Fade cascade damping={0.1}>
+          <ul
           // ref={ref}
-            className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 transition transform"
+            className="hidden sm:grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 transition transform"
             style={{ minHeight: "22rem" }}
-            // variants={container}
-            // initial="hidden"
-            //   animate="visible"
+            
           >
               {activeArray.map((places) => {
                 if (places.city === active)
+
+                  return <PlaceCard {...places} aspect=""  />
+              })}
+            </ul>
+
+            <div
+          // ref={ref}
+            className="grid sm:hidden gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 transition transform"
+            style={{ minHeight: "22rem" }}
+            
+          >
+              {activeArray.map((places) => {
+                if (places.city === active)
+
                   return <PlaceCard {...places} aspect=""  />
               })}
             </div>
-            </LazyMotion>
+
+             </Fade>
         )}
 
         {active === "view all" && (
-          <LazyMotion features={domAnimation}>
-            <Pagination container={container} item={item} itemsPerPage={8} array={StayPlaceslist} />
-
-          </LazyMotion>
+            <Pagination itemsPerPage={8} array={StayPlaceslist} />
         )}
 
         {/* <Pagination itemsPerPage={8} array={activeArray} /> */}

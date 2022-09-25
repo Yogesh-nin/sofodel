@@ -9,7 +9,7 @@ import { Autoplay, Pagination } from "swiper";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-
+import { Slide } from "react-awesome-reveal";
 const PlaceCard = (props) => {
   const [swiperRef, setSwiperRef] = useState();
 
