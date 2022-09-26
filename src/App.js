@@ -24,8 +24,8 @@ function App() {
         <Experience />
         <Section2 />
         <ChooseUs />
-        <Reviews />
         <NewsLetter />
+        <Reviews />
       <Footer />
       </div>
         

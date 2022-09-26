@@ -98,7 +98,7 @@ const PlaceCard = (props) => {
               </div>
               <div className="flex justify-between items-center mt-4">
                 <span className="font-semibold">
-                  ${props.rate}
+                ₹{props.rate}
                   <span className="text-sm text-neutral-500 font-normal">
                     /night
                   </span>

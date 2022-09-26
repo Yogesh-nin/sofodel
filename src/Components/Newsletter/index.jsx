@@ -2,11 +2,9 @@ import React from "react";
 import img from "../../Assets/SVG-subcribe2.efb832b25bd6eca32484.png";
 import { BiRightArrowAlt } from 'react-icons/bi'
 import './index.css'
-import { Fade } from "react-awesome-reveal";
 const NewsLetter = () => {
   return (
     <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
-      <Fade cascade damping={0.1} triggerOnce='true'>
       <div className="relative flex flex-col lg:flex-row lg:items-center">
         <div className="flex-shrink-0 mb-10 lg:mb-0 lg:mr-10 lg:w-2/5">
           <h2 className="font-semibold text-4xl">Join our newsletter 🎉</h2>
@@ -47,7 +45,6 @@ const NewsLetter = () => {
           </div>
         </div>
       </div>
-        </Fade>
     </div>
   );
 };

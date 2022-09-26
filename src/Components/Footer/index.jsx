@@ -7,6 +7,7 @@ import {
   RiYoutubeLine,
 } from "react-icons/ri";
 import "./index.css";
+import { MdCall } from 'react-icons/md'
 import logo from "../../Assets/StayTrails/nav-logo.png";
 const Footer = () => {
   return (
@@ -203,8 +204,21 @@ const Footer = () => {
                 href="/"
                 className="flex items-center text-2xl my-2 hover:text-gray-900 leading-none space-x-2"
               >
-                <RiMailLine className="icon mr-2" />{" "}
-                <span className="hidden md:block"> info@staytrails.co</span>
+                <div className="flex flex-col">
+                
+                <span className="hidden md:flex"><RiMailLine className="icon mr-2" />{" "} info@staytrails.co</span>
+                <div className="my-3 footer-links">
+                  <address className="flex">
+                    <MdCall className="icon mr-2" />
+                    <span>
+                    {/* Stay Trails Hospitality and Travel OPC Pvt. Ltd. West
+                    Congress Para Jalpaiguri, W.B India - 735101 */}
+                    9312738349
+                    </span>
+                  </address>
+                </div>
+                </div>
+                
               </a>
             </span>
           </div>

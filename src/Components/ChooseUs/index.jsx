@@ -1,5 +1,4 @@
 import React from "react";
-import { Fade } from "react-awesome-reveal";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import img from '../../Assets/BecomeAnAuthor.png'
 const ChooseUs = () => {
@@ -7,7 +6,6 @@ const ChooseUs = () => {
     <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
       <div className="relative py-16">
         <div className="absolute inset-y-0 w-screen xl:max-w-[1340px] 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2 xl:rounded-[40px] z-0 bg-neutral-100 "></div>
-        <Fade cascade damping={0.1} triggerOnce='true'>
         <div className="relative flex flex-col lg:flex-row items-center ">
 
           <div className="flex-shrink-0 mb-16 lg:mb-0 lg:mr-10 lg:w-2/5">
@@ -31,7 +29,6 @@ const ChooseUs = () => {
             </div>
           </div>
         </div>
-          </Fade>
       </div>
     </div>
   );

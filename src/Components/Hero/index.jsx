@@ -1,5 +1,4 @@
 import React from 'react'
-import { Fade, Slide } from 'react-awesome-reveal'
 import img from '../../Assets/hero-right.ee78c0ffae92062cbe4e.png'
 import CheckInForm from '../CheckInForm'
 import './index.css'
@@ -7,7 +6,6 @@ const Hero = () => {
   return (
     <div className="container relative mt-28  space-y-24 mb-24 lg:space-y-28 lg:mb-28">
       <div className='nc-SectionHero flex flex-col-reverse lg:flex-col relative pt-10 lg:pt-16 lg:pb-16'>
-      <Fade cascade damping={0.1} triggerOnce='true'>
 
       <div className='flex flex-col lg:flex-row lg:items-center'>
         <div className='flex-shrink-0 lg:w-1/2 flex flex-col items-start space-y-8 sm:space-y-10 pb-14 lg:pb-64 xl:pr-14 lg:mr-10 xl:mr-0'>
@@ -22,7 +20,6 @@ const Hero = () => {
       <div >
         <CheckInForm />
       </div>
-      </Fade>
       </div>
     </div>
   )

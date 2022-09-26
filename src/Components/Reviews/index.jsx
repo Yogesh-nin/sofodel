@@ -15,7 +15,6 @@ import { AiOutlineLeftCircle } from "react-icons/ai";
 import { AiOutlineRightCircle } from "react-icons/ai";
 
 import Slider from "react-slick";
-import { Fade } from 'react-awesome-reveal'
 
 const Reviews = () => {
 
@@ -36,7 +35,6 @@ const Reviews = () => {
         <div className="relative py-16">
             <div className="absolute inset-y-0 w-screen xl:max-w-[1340px] 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2 xl:rounded-[40px] z-0 bg-neutral-100"></div>
             <div className="relative">
-                <Fade cascade damping={0.1} triggerOnce='true'>
                 <div className="relative flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-gray-900">
                     <div className="text-center w-full max-w-2xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
@@ -77,7 +75,6 @@ const Reviews = () => {
                         </Slider>
                     </div>
                 </div>
-                </Fade>
             </div>
         </div>
     </div>

@@ -72,6 +72,17 @@ const StayPlaceslist = [
   },
   {
     badge: false,
+    images: [img1, img2, img3, img4],
+    beds: "10",
+    title: "Best Western Cedars",
+    location: "1 Anzinger Court",
+    rate: "26",
+    star: "4.8",
+    total: "28",
+    city: "New Delhi",
+  },
+  {
+    badge: false,
     images: [img17, img18, img19, img20],
     beds: "3",
     title: "Ship and castle Hotel",
@@ -124,6 +135,17 @@ const StayPlaceslist = [
     star: "3.9",
     total: "188",
     city: "New Delhi",
+  },
+  {
+    badge: false,
+    images: [img9, img10, img11, img12],
+    beds: "9",
+    title: "Half Moon, Sherborne By Marnstone",
+    location: "6731 Killdeer Park",
+    rate: "278",
+    star: "3.6",
+    total: "16",
+    city: "Agra",
   },
   {
     badge: false,
@@ -197,7 +219,6 @@ const StayPlaces = () => {
       <div className="relative py-16">
         <div className="absolute inset-y-0 w-screen xl:max-w-[1340px] 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2 xl:rounded-[40px] z-0 bg-neutral-100"></div>
         <div className="flex flex-col mb-8">
-          <Fade cascade damping={0.1} triggerOnce='true'>
           <div className="flex flex-col relative sm:flex-row sm:items-end justify-between mb-10 md:mb-12 ">
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-semibold">
@@ -264,11 +285,10 @@ const StayPlaces = () => {
               </button>
             </span>
           </div>
-          </Fade>
         </div>
 
         {active !== "view all" && (
-          <Fade cascade damping={0.1} triggerOnce='true'>
+          <>
           <ul
           // ref={ref}
             className="hidden sm:grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 transition transform"
@@ -294,8 +314,7 @@ const StayPlaces = () => {
                   return <PlaceCard {...places} aspect=""  />
               })}
             </div>
-
-             </Fade>
+            </>
         )}
 
         {active === "view all" && (
