@@ -16,6 +16,7 @@ import {
 } from "body-scroll-lock";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { Fade, Slide } from "react-awesome-reveal";
+import SearchBar from "../Search";
 
 const navList = ["Home", "About", "Properties", "Experience", "Contact us"];
 
@@ -77,8 +78,9 @@ const MobileTabs = () => {
 
 const LargeTabs = () => {
   const [openNav, setOpenNav] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false)
 
-  openNav ? disableBodyScroll(document) : enableBodyScroll(document);
+  openNav || openSearch ? disableBodyScroll(document) : enableBodyScroll(document);
 
   return (
     <div>
@@ -127,7 +129,7 @@ const LargeTabs = () => {
           </div>
           <div className="lg:hidden flex-[3] max-w-lg !mx-auto  md:px-3">
             <div className="">
-              <button className="relative flex items-center w-full border border-neutral-200 dark:border-neutral-6000 px-2 py-2 pr-11 rounded-full shadow-lg">
+              <button className="relative flex items-center w-full border border-neutral-200 dark:border-neutral-6000 px-2 py-2 pr-11 rounded-full shadow-lg" onClick={()=> setOpenSearch(true)}>
                 <GrSearch />
                 <div className="ml-3 flex-1 text-left overflow-hidden">
                   <span className="block font-medium text-sm">Where to?</span>
@@ -182,6 +184,11 @@ const LargeTabs = () => {
               onHide={() => setOpenNav(false)}
             />
           )}
+          {
+            openSearch && (
+              <SearchBar show={()=> setOpenSearch(true)} onHide={()=> setOpenSearch(false)} />
+            )
+          }
         </div>
       </div>
     </div>

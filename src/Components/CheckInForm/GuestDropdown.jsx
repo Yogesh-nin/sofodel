@@ -63,7 +63,8 @@ const GuestDropdown = ({changeGuest, hide}) => {
 
     
   return (
-    <div className="absolute right-0 z-10 w-full sm:min-w-[340px] max-w-sm bg-white top-full mt-3 py-5 sm:py-6 px-4 sm:px-8 rounded-3xl shadow-xl opacity-100 translate-y-0" ref={refOne}>
+    <div className="absolute right-0 z-10 w-full sm:min-w-[340px] max-w-sm bg-white top-full mt-3 py-5 sm:py-6 px-4 sm:px-8 rounded-3xl shadow-xl opacity-100 translate-y-0" ref={refOne} >
+    
       <div className="flex items-center justify-between space-x-5 w-full">
         <div className="flex flex-col">
           <span className="font-medium text-neutral-800">
@@ -127,7 +128,7 @@ const GuestDropdown = ({changeGuest, hide}) => {
             </button>
           </div>
       </div>
-    </div>
+      </div>
   );
 };
 

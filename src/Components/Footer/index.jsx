@@ -199,7 +199,7 @@ const Footer = () => {
                     </li>
                 </ul> */}
           <div className="mt-5 space-y-4">
-            <span className="social-links">
+            {/* <span className="social-links">
               <a
                 href="/"
                 className="flex items-center text-2xl my-2 hover:text-gray-900 leading-none space-x-2"
@@ -210,9 +210,9 @@ const Footer = () => {
                 <div className="my-3 footer-links">
                   <address className="flex">
                     <MdCall className="icon mr-2" />
+
                     <span>
-                    {/* Stay Trails Hospitality and Travel OPC Pvt. Ltd. West
-                    Congress Para Jalpaiguri, W.B India - 735101 */}
+                    
                     9312738349
                     </span>
                   </address>
@@ -220,7 +220,23 @@ const Footer = () => {
                 </div>
                 
               </a>
-            </span>
+            </span> */}
+            <div className="social-links flex items-center space-x-2 lg:space-x-0 lg:flex-col lg:space-y-2.5 lg:items-start">
+              <a
+                href="/"
+                className="flex items-center text-2xl my-2 hover:text-gray-900 leading-none space-x-2"
+              >
+                <RiMailLine className="icon mr-2" />{" "}
+                <span className="hidden md:block">info@staytrails.co</span>
+              </a>
+              <a
+                href="/"
+                className="flex items-center text-2xl  my-2 text-neutral-700 hover:text-gray-900 leading-none space-x-2"
+              >
+                <MdCall className="icon mr-2" />{" "}
+                <span className="hidden md:block">+91 9178265213</span>
+              </a>
+              </div>
           </div>
         </div>
       </div>

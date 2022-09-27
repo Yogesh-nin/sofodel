@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+.css-1gzxeik{
+  animation-fill-mode: backwards !important;
+}
+
 @media (min-width: 640px) {
   .container{
     max-width: 640px;

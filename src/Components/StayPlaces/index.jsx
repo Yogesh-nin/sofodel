@@ -23,7 +23,8 @@ import img18 from "../../Assets/stay-slider/pexels-photo-276746.jpeg";
 import img19 from "../../Assets/stay-slider/pexels-photo-2983472.jpeg";
 import img20 from "../../Assets/stay-slider/pexels-photo-3068519.jpeg";
 import Pagination from "./Pagination";
-import { Fade } from "react-awesome-reveal";
+import { motion } from 'framer-motion'
+
 
 const StayPlaceslist = [
   {
@@ -295,10 +296,14 @@ const StayPlaces = () => {
             style={{ minHeight: "22rem" }}
             
           >
-              {activeArray.map((places) => {
+              {activeArray.map((places, i) => {
                 if (places.city === active)
 
-                  return <PlaceCard {...places} aspect=""  />
+                  return <motion.li key={i}
+                              initial={{opacity: 0, translateY: 10}}
+                              animate={{opacity: 1, translateY: 1}}
+                              transition={{duration: 0.3, delay: i*0.2}}
+                  > <PlaceCard {...places} aspect=""  /></motion.li>
               })}
             </ul>
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Fade } from 'react-awesome-reveal';
+import { motion } from 'framer-motion'
 import ReactPaginate from 'react-paginate';
 import PlaceCard from '../PlaceCard';
 
@@ -33,8 +33,14 @@ const Pagination = ({itemsPerPage, array, container, item}) => {
     <div className="">
         <ul className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 overflow-x-hidden "  style={{ minHeight: "22rem" }}
             >
-          {currentItems && currentItems.map((places) => {
-              return <PlaceCard {...places} aspect="" />
+          {currentItems && currentItems.map((places, i) => {
+              return <motion.li key={i}
+              initial={{opacity: 0, translateY: 10}}
+              animate={{opacity: 1, translateY: 1}}
+              transition={{duration: 0.3, delay: i*0.2}}
+  >
+              <PlaceCard {...places} aspect="" />
+              </motion.li>
           })}
         </ul>
       <ReactPaginate

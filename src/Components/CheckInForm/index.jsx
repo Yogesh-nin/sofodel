@@ -138,7 +138,7 @@ const initialDates = [
                           value={`${
                             dates[0].startDate === null
                               ? "Check In"
-                              : format(dates[0].startDate, "dd/MM/yyyy")
+                              : format(dates[0].startDate, "dd/MMM/yyyy")
                           }`}
                           readOnly
                           className="inputBox w-5/6 block xl:text-lg font-semibold outline-none"
@@ -375,6 +375,7 @@ const initialDates = [
                   </div>
                 )}
                 {guestDropdownActive && (
+                  
                   <GuestDropdown
                     changeGuest={changeGuest}
                     hide={() => setGuestDropdownActive(false)}
