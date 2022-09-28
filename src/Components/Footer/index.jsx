@@ -11,13 +11,13 @@ import { MdCall } from 'react-icons/md'
 import logo from "../../Assets/StayTrails/nav-logo.png";
 const Footer = () => {
   return (
-    <div className="relative py-24 lg:py-28 border-t border-neutral-200 dark:border-neutral-700">
+    <div className="relative py-24 lg:py-28 border-t border-neutral-200 ">
       <div className="container grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-10 ">
         <div className="grid grid-cols-4 gap-5 col-span-2 md:col-span-4 lg:md:col-span-1 lg:flex lg:flex-col">
           <div className="col-span-2 md:col-span-1">
             <a
               href="/"
-              className="inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24 sm:w-28"
+              className="inline-block focus:outline-none focus:ring-0 w-24 sm:w-28"
             >
               <div className="">
                 <img src={logo} alt="" className="cover-object w-full h-full" />
@@ -227,14 +227,14 @@ const Footer = () => {
                 className="flex items-center text-2xl my-2 hover:text-gray-900 leading-none space-x-2"
               >
                 <RiMailLine className="icon mr-2" />{" "}
-                <span className="hidden md:block">info@staytrails.co</span>
+                <span className="hidden lg:block">info@staytrails.co</span>
               </a>
               <a
                 href="/"
                 className="flex items-center text-2xl  my-2 text-neutral-700 hover:text-gray-900 leading-none space-x-2"
               >
                 <MdCall className="icon mr-2" />{" "}
-                <span className="hidden md:block">+91 9178265213</span>
+                <span className="hidden lg:block">+91 9178265213</span>
               </a>
               </div>
           </div>

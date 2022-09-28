@@ -12,6 +12,7 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { Fade } from "react-awesome-reveal";
 const SearchBar = ({ show, onHide }) => {
+  const [location, setLocation] = useState("");
   const [guestAdult, setGuestAdult] = useState(0);
   const [guestChild, setGuestChild] = useState(0);
   const [guestInfant, setGuestInfant] = useState(0);
@@ -59,6 +60,7 @@ const SearchBar = ({ show, onHide }) => {
   }, [guestAdult, guestChild, guestInfant]);
 
   const resetValue = () => {
+    setLocation("");
     setGuestAdult(0);
     setGuestChild(0);
     setGuestInfant(0);
@@ -77,14 +79,14 @@ const SearchBar = ({ show, onHide }) => {
                 <MdClose />
               </button>
             </div>
-            <div className="pt-12 flex w-full justify-center font-semibold text-sm sm:text-base text-neutral-500 dark:text-neutral-400 space-x-6 sm:space-x-8">
+            <div className="pt-12 flex w-full justify-center font-semibold text-sm sm:text-base text-neutral-500 space-x-6 sm:space-x-8">
               <div
                 className={`flex-shrink-0 flex items-center cursor-pointer text-sm lg:text-base font-medium hover:bg-slate-200 px-4 py-2 rounded-3xl ${
                   active === 1 ? "border bg-slate-200" : ""
                 }`}
                 onClick={() => setActive(1)}
               >
-                <div className="text-black dark:text-white">Properties</div>
+                <div className="text-black">Properties</div>
               </div>
               <div
                 className={`flex-shrink-0 flex items-center cursor-pointer text-sm lg:text-base font-medium hover:bg-slate-200 px-4 py-2 rounded-3xl ${
@@ -92,7 +94,7 @@ const SearchBar = ({ show, onHide }) => {
                 }`}
                 onClick={() => setActive(2)}
               >
-                <div className="text-black dark:text-white  ">Experience</div>
+                <div className="text-black ">Experience</div>
               </div>
             </div>
 
@@ -101,7 +103,7 @@ const SearchBar = ({ show, onHide }) => {
                 <Fade>
                 {active === 1 && (
                   <div className="w-full space-y-5">
-                    <div className="w-full bg-white dark:bg-neutral-800 rounded-2xl shadow-lg">
+                    <div className="w-full bg-white rounded-2xl shadow-lg">
                       <button
                         className={`w-full ${
                           activeTab === 0 ? "hidden" : "flex"
@@ -109,7 +111,7 @@ const SearchBar = ({ show, onHide }) => {
                         onClick={() => setActiveTab(0)}
                       >
                         <span className="text-neutral-400">Where</span>
-                        <span>Location</span>
+                        <span>{location === "" ? "Location" : location}</span>
                       </button>
                       {activeTab === 0 && (
                         <div className="p-3">
@@ -118,8 +120,8 @@ const SearchBar = ({ show, onHide }) => {
                           </div>
                           <div className="relative mt-3">
                             <input
-                              className="block w-full bg-transparent border px-4 py-3 pr-12 border-neutral-900 dark:border-neutral-200 rounded-xl focus:ring-0 focus:outline-none text-base leading-none placeholder-neutral-500 dark:placeholder-neutral-300 truncate font-bold placeholder:truncate"
-                              placeholder="Search Destinations"
+                              className="block w-full bg-transparent border px-4 py-3 pr-12 border-neutral-900  rounded-xl focus:ring-0 focus:outline-none text-base leading-none placeholder-neutral-500 truncate font-bold placeholder:truncate"
+                              placeholder="Search Destinations" value={location} onChange={(e)=>setLocation(e.target.value)}
                             />
                             <span className="absolute right-2.5 top-1/2 -translate-y-1/2">
                               <GrSearch />
@@ -130,23 +132,23 @@ const SearchBar = ({ show, onHide }) => {
                               Popular Destinations
                             </p>
                             <div className="mt-3">
-                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm">
+                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm" onClick={()=>setLocation("New Delhi")}>
                                 <HiOutlineLocationMarker />
                                 <span className="">New Delhi</span>
                               </div>
-                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm">
+                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm" onClick={()=>setLocation("Mumbai")}>
                                 <HiOutlineLocationMarker />
                                 <span className="">Mumbai</span>
                               </div>
-                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm">
+                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm" onClick={()=>setLocation("Kolkata")}>
                                 <HiOutlineLocationMarker />
                                 <span className="">Kolkata</span>
                               </div>
-                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm">
+                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm" onClick={()=>setLocation("Bangalore")}>
                                 <HiOutlineLocationMarker />
                                 <span className="">Bangalore</span>
                               </div>
-                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm">
+                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm" onClick={()=>setLocation("Chennai")}>
                                 <HiOutlineLocationMarker />
                                 <span className="">Chennai</span>
                               </div>
@@ -155,7 +157,7 @@ const SearchBar = ({ show, onHide }) => {
                         </div>
                       )}
                     </div>
-                    <div className="w-full bg-white dark:bg-neutral-800 overflow-hidden rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]">
+                    <div className="w-full bg-white overflow-hidden rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]">
                       <button
                         className={`w-full ${
                           activeTab === 1 ? "hidden" : "flex"
@@ -185,7 +187,7 @@ const SearchBar = ({ show, onHide }) => {
                               // editableDateInputs={true}
                               moveRangeOnFirstSelection={false}
                               ranges={dates}
-                              months={2}
+                              months={1}
                               direction="horizontal"
                               className="calendarElement"
                               retainEndDateOnFirstSelection={true}
@@ -195,7 +197,7 @@ const SearchBar = ({ show, onHide }) => {
                         </div>
                       )}
                     </div>
-                    <div className="w-full bg-white dark:bg-neutral-800 overflow-hidden rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]">
+                    <div className="w-full bg-white overflow-hidden rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]">
                       <button
                         className={`w-full ${
                           activeTab === 2 ? "hidden" : "flex"
@@ -312,7 +314,7 @@ const SearchBar = ({ show, onHide }) => {
 
                 {active === 2 && (
                   <div className="w-full space-y-5">
-                    <div className="w-full bg-white dark:bg-neutral-800 rounded-2xl shadow-lg">
+                    <div className="w-full bg-white  rounded-2xl shadow-lg">
                       <button
                         className={`w-full ${
                           activeTab === 0 ? "hidden" : "flex"
@@ -329,7 +331,7 @@ const SearchBar = ({ show, onHide }) => {
                           </div>
                           <div className="relative mt-3">
                             <input
-                              className="block w-full bg-transparent border px-4 py-3 pr-12 border-neutral-900 dark:border-neutral-200 rounded-xl focus:ring-0 focus:outline-none text-base leading-none placeholder-neutral-500 dark:placeholder-neutral-300 truncate font-bold placeholder:truncate"
+                              className="block w-full bg-transparent border px-4 py-3 pr-12 border-neutral-900  rounded-xl focus:ring-0 focus:outline-none text-base leading-none placeholder-neutral-500 truncate font-bold placeholder:truncate"
                               placeholder="Search Destinations"
                             />
                             <span className="absolute right-2.5 top-1/2 -translate-y-1/2">
@@ -366,13 +368,14 @@ const SearchBar = ({ show, onHide }) => {
                         </div>
                       )}
                     </div>
-                    <div className="w-full bg-white dark:bg-neutral-800 overflow-hidden rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]">
+                    <div className="w-full bg-white  overflow-hidden rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]">
                       <button
                         className={`w-full ${
                           activeTab === 1 ? "hidden" : "flex"
                         } justify-between text-sm font-medium p-4`}
                         onClick={() => setActiveTab(1)}
                       >
+                        <span className="text-neutral-400">When</span>
                         <span>
                             {date === undefined
                               ? "Add date"
@@ -394,7 +397,7 @@ const SearchBar = ({ show, onHide }) => {
                         </div>
                       )}
                     </div>
-                    <div className="w-full bg-white dark:bg-neutral-800 overflow-hidden rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]">
+                    <div className="w-full bg-white  overflow-hidden rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]">
                       <button
                         className={`w-full ${
                           activeTab === 2 ? "hidden" : "flex"
@@ -511,7 +514,7 @@ const SearchBar = ({ show, onHide }) => {
                 </Fade>
               </div>
             </div>
-            <div className="px-4 py-3 bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-700 flex justify-between">
+            <div className="px-4 py-3 bg-white border-t border-neutral-200  flex justify-between">
               <button
                 type="button"
                 className="underline font-semibold flex-shrink-0"
