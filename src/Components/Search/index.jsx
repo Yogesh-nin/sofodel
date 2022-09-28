@@ -76,7 +76,7 @@ const SearchBar = ({ show, onHide }) => {
           <div className="relative h-full overflow-hidden flex-1 flex flex-col justify-between opacity-100 translate-y-0">
             <div className="absolute left-4 top-4">
               <button type="button" onClick={onHide}>
-                <MdClose />
+                <MdClose size={28} />
               </button>
             </div>
             <div className="pt-12 flex w-full justify-center font-semibold text-sm sm:text-base text-neutral-500 space-x-6 sm:space-x-8">
