@@ -10,6 +10,7 @@ import img7 from "../../Assets/StayTrails/Experience/pexels-photo-5560867.jpeg";
 import img8 from "../../Assets/StayTrails/Experience/pexels-photo-6455686.jpeg";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from 'react-intersection-observer'
+import { Fade } from "react-awesome-reveal";
 
 const experienceList = [
   {
@@ -94,6 +95,7 @@ const Experience = () => {
   return (
     <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
       <div ref={ref} className="relative py-16">
+        <Fade cascade damping={0.1} triggerOnce="true">
         <div className="flex flex-col mb-8">
           <div className="flex flex-col relative sm:flex-row sm:items-end justify-between mb-10 md:mb-12 ">
             <div className="max-w-2xl">
@@ -132,6 +134,7 @@ const Experience = () => {
             return <PlaceCard {...places} aspect="aspect-square" />;
           })}
         </div>
+        </Fade>
       </div>
     </div>
   );

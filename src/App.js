@@ -19,7 +19,6 @@ function App() {
     <div>
       <Navbar />
       <div className="homepage relative overflow-x-hidden">
-        <Fade cascade damping={0.1} triggerOnce="true">
           <Hero />
           <Cities />
           <StayPlaces />
@@ -28,9 +27,8 @@ function App() {
           <ChooseUs />
           <NewsLetter />
           <Reviews />
-        </Fade>
-        <Footer />
       </div>
+        <Footer />
     </div>
   );
 }

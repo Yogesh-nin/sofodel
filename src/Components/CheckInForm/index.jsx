@@ -26,6 +26,7 @@ const CheckInForm = () => {
   const [openDatePicker, setOpenDatePicker] = useState(false);
   const refOne = useRef(null);
   const [startDate, setStartDate] = useState("");
+  const [location, setLocation] = useState("")
 
   const changeGuest = (value) => {
     setGuestValue(value);
@@ -69,6 +70,20 @@ const initialDates = [
     setStartDate(value);
   };
 
+  const onLocationChange = (value) => {
+    setLocation(value)
+  }
+
+  useEffect(()=>{
+    const resetValue = () => {
+      setLocation("");
+      setGuestValue(0)
+  
+      setDates(initialDates);
+      setDate();
+    };
+    return( resetValue())
+  }, [active])
   console.log(dates[0].startDate + " date");
 
   return (
@@ -109,6 +124,8 @@ const initialDates = [
                     type="text"
                     placeholder="Location"
                     className="block w-full bg-transparent border-none focus:ring-0 p-0 focus:outline-none focus:placeholder-gray-300 xl:text-lg font-semibold placeholder-gray-800 truncate"
+                    value={location === "" ? "" : location}
+                    onChange={(e)=> setLocation(e.target.value)}
                   />
 
                   <span className="block mt-0.5 text-sm text-neutral-400 font-light">
@@ -117,7 +134,7 @@ const initialDates = [
                 </div>
               </div>
               {openLocation && (
-                <RecentSearch hide={() => setOpenLocation(false)} />
+                <RecentSearch value={location} setValue={onLocationChange} hide={() => setOpenLocation(false)} />
               )}
             </div>
 
@@ -303,6 +320,8 @@ const initialDates = [
                     type="text"
                     placeholder="Location"
                     className="block w-full bg-transparent border-none focus:ring-0 p-0 focus:outline-none focus:placeholder-gray-300 xl:text-lg font-semibold placeholder-gray-800 truncate"
+                    value={location === "" ? "" : location}
+                    onChange={(e)=> setLocation(e.target.value)}
                   />
 
                   <span className="block mt-0.5 text-sm text-neutral-400 font-light">
@@ -311,7 +330,7 @@ const initialDates = [
                 </div>
               </div>
               {openLocation && (
-                <RecentSearch hide={() => setOpenLocation(false)} />
+                <RecentSearch value={location} setValue={onLocationChange} hide={() => setOpenLocation(false)} />
               )}
             </div>
             <div className="relative flex flex-1">

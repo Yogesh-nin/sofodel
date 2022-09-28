@@ -7,10 +7,11 @@ import {
   RiYoutubeLine,
 } from "react-icons/ri";
 import "./index.css";
-import { MdCall } from 'react-icons/md'
+import { MdCall } from "react-icons/md";
 import logo from "../../Assets/StayTrails/nav-logo.png";
 const Footer = () => {
   return (
+    <div>
     <div className="relative py-24 lg:py-28 border-t border-neutral-200 ">
       <div className="container grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-10 ">
         <div className="grid grid-cols-4 gap-5 col-span-2 md:col-span-4 lg:md:col-span-1 lg:flex lg:flex-col">
@@ -236,10 +237,14 @@ const Footer = () => {
                 <MdCall className="icon mr-2" />{" "}
                 <span className="hidden lg:block">+91 9178265213</span>
               </a>
-              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+    <div className="hidden md:flex bg-neutral-100 text-gray-500 py-4 justify-center text-base-content">
+      <p>Copyright © 2022 - All right reserved by Stay Trails</p>
+    </div>
     </div>
   );
 };

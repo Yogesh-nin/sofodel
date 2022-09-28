@@ -31,7 +31,7 @@ const RecentSearch = (props) => {
     <div className="absolute left-0 z-20 w-full min-w-[300px] sm:min-w-[500px] bg-white top-full mt-3 py-3 sm:py-6 rounded-3xl shadow-xl max-h-96 overflow-y-auto" ref={refOne}>
         <h3 className="block mt-2 sm:mt-0 px-4 sm:px-8 font-semibold text-base sm:text-lg text-neutral-800">Recent searches</h3>
             <div className="mt-2">
-                <span className="flex px-4 sm:px-8 items-center space-x-3 sm:space-x-4 py-4 sm:py-5 hover:bg-neutral-100  cursor-pointer">
+                <span className="flex px-4 sm:px-8 items-center space-x-3 sm:space-x-4 py-4 sm:py-5 hover:bg-neutral-100  cursor-pointer" onClick={()=>props.setValue("Dwarka Sector-19, New Delhi")}>
                     <span className="block text-neutral-400">
                         <BsClock />
                     </span>
@@ -39,7 +39,8 @@ const RecentSearch = (props) => {
                     Dwarka Sector-19, New Delhi
                     </span>
                 </span>
-                <span className="flex px-4 sm:px-8 items-center space-x-3 sm:space-x-4 py-4 sm:py-5 hover:bg-neutral-100  cursor-pointer">
+                <span className="flex px-4 sm:px-8 items-center space-x-3 sm:space-x-4 py-4 sm:py-5 hover:bg-neutral-100  cursor-pointer"
+                onClick={()=>props.setValue("Kanpur, Uttar Pradesh")}>
                     <span className="block text-neutral-400">
                         <BsClock />
                     </span>
@@ -47,7 +48,7 @@ const RecentSearch = (props) => {
                     Kanpur, Uttar Pradesh
                     </span>
                 </span>
-                <span className="flex px-4 sm:px-8 items-center space-x-3 sm:space-x-4 py-4 sm:py-5 hover:bg-neutral-100  cursor-pointer">
+                <span className="flex px-4 sm:px-8 items-center space-x-3 sm:space-x-4 py-4 sm:py-5 hover:bg-neutral-100  cursor-pointer" onClick={()=>props.setValue("Mumbai, Maharashtra")}>
                     <span className="block text-neutral-400">
                         <BsClock />
                     </span>
@@ -55,7 +56,7 @@ const RecentSearch = (props) => {
                     Mumbai, Maharashtra
                     </span>
                 </span>
-                <span className="flex px-4 sm:px-8 items-center space-x-3 sm:space-x-4 py-4 sm:py-5 hover:bg-neutral-100  cursor-pointer">
+                <span className="flex px-4 sm:px-8 items-center space-x-3 sm:space-x-4 py-4 sm:py-5 hover:bg-neutral-100  cursor-pointer" onClick={()=>props.setValue("Vizag, Andhra Pradesh")}>
                     <span className="block text-neutral-400">
                         <BsClock />
                     </span>

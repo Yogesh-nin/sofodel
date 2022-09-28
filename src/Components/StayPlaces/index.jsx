@@ -24,6 +24,7 @@ import img19 from "../../Assets/stay-slider/pexels-photo-2983472.jpeg";
 import img20 from "../../Assets/stay-slider/pexels-photo-3068519.jpeg";
 import Pagination from "./Pagination";
 import { motion } from 'framer-motion'
+import { Fade } from "react-awesome-reveal";
 
 
 const StayPlaceslist = [
@@ -219,6 +220,7 @@ const StayPlaces = () => {
     <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
       <div className="relative py-16">
         <div className="absolute inset-y-0 w-screen xl:max-w-[1340px] 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2 xl:rounded-[40px] z-0 bg-neutral-100"></div>
+        <Fade cascade damping={0.1} triggerOnce='true'>
         <div className="flex flex-col mb-8">
           <div className="flex flex-col relative sm:flex-row sm:items-end justify-between mb-10 md:mb-12 ">
             <div className="max-w-2xl">
@@ -334,6 +336,7 @@ const StayPlaces = () => {
               return <PlaceCard {...places} aspect="" />
           })}
         </div> */}
+        </Fade>
       </div>
     </div>
   );

@@ -6,14 +6,13 @@ import logo from "../../Assets/StayTrails/nav-logo.png";
 
 const Sidebar = (props) => {
   return (
-    <Fade>
     <div className="relative z-50 overflow-hidden">
         <div className="fixed inset-0 bg-neutral-900 bg-opacity-50 opacity-100"></div>
       <div className="fixed inset-0">
         <div className="flex justify-end min-h-full">
           <div className="w-full max-w-md overflow-hidden transition-all opacity-100 translate-x-0">
             <div className="overflow-y-auto w-full h-screen py-2 transition transform shadow-lg ring-1 bg-white divide-y-2 divide-neutral-100">
-              <div className="py-6 px-5">
+              <div className="py-6 px-3 md:px-5">
                 <a
                   href=""
                   className="inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24"
@@ -22,7 +21,7 @@ const Sidebar = (props) => {
                     <img src={logo} alt="" className="" />
                   </div>
                 </a>
-                <div className="flex flex-col mt-5 text-neutral-700">
+                <div className="flex flex-col mt-2 md:mt-5 text-neutral-700">
                     <span className="">Discover the most outstanding articles on all topics of life. Write your stories and share them</span>
 
                     <div className="flex justify-between items-center mt-4">
@@ -40,7 +39,7 @@ const Sidebar = (props) => {
                     </button>
                 </span>
               </div>
-              <ul className="flex flex-col py-6 px-2 space-y-1">
+              <ul className="flex flex-col py-3 md:py-6 px-2 space-y-1">
                 <li className="text-gray-900">
                   <a
                     href=""
@@ -99,7 +98,7 @@ const Sidebar = (props) => {
         </div>
       </div>
     </div>
-    </Fade>
+
   );
 };
 

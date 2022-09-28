@@ -31,7 +31,7 @@ const Pagination = ({itemsPerPage, array, container, item}) => {
 
   return (
     <div className="">
-        <ul className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 overflow-x-hidden "  style={{ minHeight: "22rem" }}
+        <ul className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  overflow-hidden "  style={{ minHeight: "22rem" }}
             >
           {currentItems && currentItems.map((places, i) => {
               return <motion.li key={i}

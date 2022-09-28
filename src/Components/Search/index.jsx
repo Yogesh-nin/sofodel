@@ -69,6 +69,11 @@ const SearchBar = ({ show, onHide }) => {
     setDate();
   };
 
+  useEffect(()=>{
+
+    return( resetValue())
+  }, [active])
+
   return (
     <div className="relative z-max">
       <div className="fixed inset-0 bg-neutral-100 ">
@@ -332,7 +337,7 @@ const SearchBar = ({ show, onHide }) => {
                           <div className="relative mt-3">
                             <input
                               className="block w-full bg-transparent border px-4 py-3 pr-12 border-neutral-900  rounded-xl focus:ring-0 focus:outline-none text-base leading-none placeholder-neutral-500 truncate font-bold placeholder:truncate"
-                              placeholder="Search Destinations"
+                              placeholder="Search Destinations" value={location} onChange={(e)=>setLocation(e.target.value)}
                             />
                             <span className="absolute right-2.5 top-1/2 -translate-y-1/2">
                               <GrSearch />
@@ -343,23 +348,23 @@ const SearchBar = ({ show, onHide }) => {
                               Popular Destinations
                             </p>
                             <div className="mt-3">
-                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm">
+                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm" onClick={()=>setLocation("New Delhi")}>
                                 <HiOutlineLocationMarker />
                                 <span className="">New Delhi</span>
                               </div>
-                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm">
+                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm" onClick={()=>setLocation("Mumbai")}>
                                 <HiOutlineLocationMarker />
                                 <span className="">Mumbai</span>
                               </div>
-                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm">
+                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm" onClick={()=>setLocation("Kolkata")}>
                                 <HiOutlineLocationMarker />
                                 <span className="">Kolkata</span>
                               </div>
-                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm">
+                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm" onClick={()=>setLocation("Bangalore")}>
                                 <HiOutlineLocationMarker />
                                 <span className="">Bangalore</span>
                               </div>
-                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm">
+                              <div className="py-2 mb-1 flex items-center space-x-3 text-sm" onClick={()=>setLocation("Chennai")}>
                                 <HiOutlineLocationMarker />
                                 <span className="">Chennai</span>
                               </div>
@@ -514,7 +519,7 @@ const SearchBar = ({ show, onHide }) => {
                 </Fade>
               </div>
             </div>
-            <div className="px-4 py-3 bg-white border-t border-neutral-200  flex justify-between">
+            <div className="px-4 py-3 bg-white border-t border-neutral-200 z-max  flex justify-between">
               <button
                 type="button"
                 className="underline font-semibold flex-shrink-0"
