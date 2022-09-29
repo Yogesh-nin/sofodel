@@ -9,7 +9,6 @@ import { Autoplay, Pagination } from "swiper";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import { Slide } from "react-awesome-reveal";
 const PlaceCard = (props) => {
   const [swiperRef, setSwiperRef] = useState();
 
@@ -75,7 +74,7 @@ const PlaceCard = (props) => {
         <a href="/">
           <div className="px-4 py-3 space-y-4">
             <div className="space-y-2">
-              <span className="text-sm text-neutral-500 dark:text-neutral-400">
+              <span className="text-sm text-neutral-500">
                 Entire Cabin . {props.beds}
               </span>
               <div className="flex items-center space-x-2">

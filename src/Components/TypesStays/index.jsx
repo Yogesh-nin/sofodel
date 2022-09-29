@@ -43,7 +43,7 @@ const StaysTypes = () => {
     <div className='container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28'>
         <div className="relative flex flex-col mb-12 lg:mb-16">
             <h2 className='text-3xl md:text-4xl font-semibold'>Explore by types of stays</h2>
-            <span className='mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400'>Explore houses based on 10 types of stays</span>
+            <span className='mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500'>Explore houses based on 10 types of stays</span>
         </div>
         <div className="">
           <SwiperComponent array={types} classes="w-224 h-168 sm-w-274 sm-h-205" />

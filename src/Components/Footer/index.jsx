@@ -172,12 +172,7 @@ const Footer = () => {
                 Host Policy
               </a>
             </li>
-            {/* <li>
-                        <a href="/" className='text-gray-600  hover:text-gray-900 footer-links'>Learn Design</a>
-                    </li>
-                    <li>
-                        <a href="/" className='text-gray-600  hover:text-gray-900 footer-links'>Release</a>
-                    </li> */}
+
           </ul>
         </div>
         <div className="text-sm">
@@ -200,28 +195,7 @@ const Footer = () => {
                     </li>
                 </ul> */}
           <div className="mt-5 space-y-4">
-            {/* <span className="social-links">
-              <a
-                href="/"
-                className="flex items-center text-2xl my-2 hover:text-gray-900 leading-none space-x-2"
-              >
-                <div className="flex flex-col">
-                
-                <span className="hidden md:flex"><RiMailLine className="icon mr-2" />{" "} info@staytrails.co</span>
-                <div className="my-3 footer-links">
-                  <address className="flex">
-                    <MdCall className="icon mr-2" />
-
-                    <span>
-                    
-                    9312738349
-                    </span>
-                  </address>
-                </div>
-                </div>
-                
-              </a>
-            </span> */}
+            
             <div className="social-links flex items-center space-x-2 lg:space-x-0 lg:flex-col lg:space-y-2.5 lg:items-start">
               <a
                 href="/"

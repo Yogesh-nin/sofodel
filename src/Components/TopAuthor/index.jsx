@@ -11,7 +11,6 @@ import img9 from '../../Assets/author/Image-9.d879028d45de09c9ca3b.png'
 import img10 from '../../Assets/author/Image-10.93048ca791076288cf69.png'
 
 import './index.css'
-import {AiFillStar} from 'react-icons/ai'
 import AuthorCard from './AuthorCard'
 
 const author = [
@@ -93,10 +92,10 @@ const TopAuthor = () => {
   return (
     <div className='container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28 bg-orange-50'>
         <div className="relative py-16">
-            <div className="relative flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-gray-900 dark:text-gray-50">
+            <div className="relative flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-gray-900">
                 <div className="text-center w-full max-w-2xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">Top 10 author of the month</h2>
-                    <span className="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-gray-500 dark:text-gray-400">Rating based on the customer reviews</span>
+                    <span className="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-gray-500">Rating based on the customer reviews</span>
                 </div>
             </div>
 
@@ -108,9 +107,9 @@ const TopAuthor = () => {
                 }
             </div>
             <div className="mt-16 flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-5">
-                <button className='relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6 font-medium border bg-white border-gray-200 text-gray-900 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0'>Show me more</button>
+                <button className='relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base px-4 py-3 sm:px-6 font-medium border bg-white border-gray-200 text-gray-900 hover:bg-gray-100   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000'>Show me more</button>
 
-                <button className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">Become a host</button>
+                <button className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000">Become a host</button>
             </div>
         </div>
     </div>

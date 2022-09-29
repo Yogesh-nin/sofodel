@@ -227,7 +227,7 @@ const StayPlaces = () => {
               <h2 className="text-3xl md:text-4xl font-semibold">
                 Featured properties to stay
               </h2>
-              <span className="mt-2 md:mt-4 font-normal block text-base sm:text-lg text-neutral-500 dark:text-neutral-400">
+              <span className="mt-2 md:mt-4 font-normal block text-base sm:text-lg text-neutral-500">
                 Popular places to stay that StayTrails recommends for you
               </span>
             </div>
@@ -278,7 +278,7 @@ const StayPlaces = () => {
 
             <span className="hidden sm:block flex-shrink-0">
               <button
-                className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base px-4 py-3 sm:px-6 font-medium border bg-white border-neutral-200 text-gray-900 hover:bg-gray-100 !leading-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"
+                className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base px-4 py-3 sm:px-6 font-medium border bg-white border-neutral-200 text-gray-900 hover:bg-gray-100 !leading-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark-gold"
                 onClick={() => setActive("view all")}
               >
                 View all{" "}

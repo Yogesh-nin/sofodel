@@ -1,97 +1,94 @@
 import React, { useState } from "react";
-// import "./index.css";
 import { useParams } from "react-router-dom";
 import { VscSearch, VscHeart } from "react-icons/vsc";
 import { MdOutlineMenu } from "react-icons/md";
-import { HiOutlineUserCircle } from "react-icons/hi";
 import { GrSearch } from "react-icons/gr";
-import { HiShare } from "react-icons/hi";
+import { HiShare, HiOutlineUserCircle } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "../../Assets/StayTrails/nav-logo.png";
 import Sidebar from "./Sidebar";
 import {
   disableBodyScroll,
   enableBodyScroll,
-  clearAllBodyScrollLocks,
 } from "body-scroll-lock";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import SearchBar from "../Search";
 
 const navList = ["Home", "About", "Properties", "Experience", "Contact us"];
 
-const MobileTabs = () => {
-  const [allTypes] = useState([
-    {
-      id: "explore",
-      icon: <VscSearch />,
-      name: "Explore",
-    },
-    {
-      id: "wishlists",
-      icon: <VscHeart />,
-      name: "Wishlists",
-    },
-    {
-      id: "log-in",
-      icon: <HiOutlineUserCircle />,
-      name: "Log In",
-    },
-    {
-      id: "menu",
-      icon: <MdOutlineMenu />,
-      name: "Menu",
-    },
-  ]);
-  const [activeTabs, setActiveTabs] = useState("")
-console.log(activeTabs)
-  const { type } = useParams();
-  const [openNav, setOpenNav] = useState(false);
-  const [openSearch, setOpenSearch] = useState(false)
+// const MobileTabs = () => {
+//   const [allTypes] = useState([
+//     {
+//       id: "explore",
+//       icon: <VscSearch />,
+//       name: "Explore",
+//     },
+//     {
+//       id: "wishlists",
+//       icon: <VscHeart />,
+//       name: "Wishlists",
+//     },
+//     {
+//       id: "log-in",
+//       icon: <HiOutlineUserCircle />,
+//       name: "Log In",
+//     },
+//     {
+//       id: "menu",
+//       icon: <MdOutlineMenu />,
+//       name: "Menu",
+//     },
+//   ]);
+//   const [activeTabs, setActiveTabs] = useState("")
+// console.log(activeTabs)
+//   const { type } = useParams();
+//   const [openNav, setOpenNav] = useState(false);
+//   const [openSearch, setOpenSearch] = useState(false)
 
 
-  openNav ? disableBodyScroll(document) : enableBodyScroll(document);
+//   openNav ? disableBodyScroll(document) : enableBodyScroll(document);
 
 
-  return (
-    <>
+//   return (
+//     <>
     
-      <div className="md:hidden bg-white shadow-lg fixed bottom-0 z-30 w-full p-2 overflow-x-hidden flex items-center justify-between md:justify-evenly text-gray-500 border">
-        {allTypes.map((item, id) => (
-          <div key={item.id} className="w-1/4 cursor-pointer" onClick={()=> setOpenNav(true)}>
-            <div
-              className={
-                type === item.id
-                  ? "flex text-center flex-col relative items-center text-xl "
-                  : "flex text-center flex-col items-center text-xl"
-              }
-            >
-              <div
-                className={
-                  type === item.id
-                    ? "w-full h-full border-t-2 p-3  flex flex-col items-center"
-                    : "flex flex-col items-center"
-                }
-              >
-                {item.icon}
-                <h5 className="text-sm">{item.name}</h5>
-              </div>
-            </div>
-          </div>
-        ))}
+//       <div className="md:hidden bg-white shadow-lg fixed bottom-0 z-30 w-full p-2 overflow-x-hidden flex items-center justify-between md:justify-evenly text-gray-500 border">
+//         {allTypes.map((item, id) => (
+//           <div key={item.id} className="w-1/4 cursor-pointer" onClick={()=> setOpenNav(true)}>
+//             <div
+//               className={
+//                 type === item.id
+//                   ? "flex text-center flex-col relative items-center text-xl "
+//                   : "flex text-center flex-col items-center text-xl"
+//               }
+//             >
+//               <div
+//                 className={
+//                   type === item.id
+//                     ? "w-full h-full border-t-2 p-3  flex flex-col items-center"
+//                     : "flex flex-col items-center"
+//                 }
+//               >
+//                 {item.icon}
+//                 <h5 className="text-sm">{item.name}</h5>
+//               </div>
+//             </div>
+//           </div>
+//         ))}
 
-        {
-          openNav && (
-            <Sidebar 
-            show={() => setOpenNav(true)}
-            onHide={() => setOpenNav(false)}
-            />
-          )
-        }
-      </div>
-    </>
-  );
-};
+//         {
+//           openNav && (
+//             <Sidebar 
+//             show={() => setOpenNav(true)}
+//             onHide={() => setOpenNav(false)}
+//             />
+//           )
+//         }
+//       </div>
+//     </>
+//   );
+// };
 
 const LargeTabs = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -122,7 +119,6 @@ const LargeTabs = () => {
     },
   ]);
   const [activeTabs, setActiveTabs] = useState("")
-console.log(activeTabs)
   const { type } = useParams();
 
 
@@ -278,7 +274,6 @@ const Navbar = () => {
   return (
     <>
       <div>
-        {/* <MobileTabs /> */}
         <LargeTabs />
       </div>
     </>

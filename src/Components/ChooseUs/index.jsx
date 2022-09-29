@@ -1,6 +1,5 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import { FaMapMarkerAlt } from "react-icons/fa";
 import img from '../../Assets/BecomeAnAuthor.png'
 const ChooseUs = () => {
   return (

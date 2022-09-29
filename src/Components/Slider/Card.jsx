@@ -22,5 +22,3 @@ const Card = (props) => {
 };
 
 export default Card;
-
-//opacity-0 group-hover:opacity-100 absolute inset-0 bg-black 

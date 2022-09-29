@@ -4,12 +4,9 @@ import { MdDateRange } from "react-icons/md";
 import { BiUserPlus } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import DatePickerComponent from "./DatePickerComponent";
-import Input from "./Input";
 import "./index.css";
 import GuestDropdown from "./GuestDropdown";
-import DateRangePicker from "./DateRangePicker";
 import format from "date-fns/format";
-import { addDays } from "date-fns";
 import { DateRange } from "react-date-range";
 
 import "react-date-range/dist/styles.css";
@@ -18,12 +15,10 @@ import "./Datepicker.css";
 import RecentSearch from "./RecentSearch";
 const CheckInForm = () => {
   const [active, setActive] = useState("1");
-  const [focus, setFocus] = useState(false);
   const [guestDropdownActive, setGuestDropdownActive] = useState(false);
   const [guestValue, setGuestValue] = useState(0);
   const [openDateRange, setOpenDateRange] = useState(false);
   const [openLocation, setOpenLocation] = useState(false);
-  const [openDatePicker, setOpenDatePicker] = useState(false);
   const refOne = useRef(null);
   const [startDate, setStartDate] = useState("");
   const [location, setLocation] = useState("")
@@ -84,7 +79,6 @@ const initialDates = [
     };
     return( resetValue())
   }, [active])
-  console.log(dates[0].startDate + " date");
 
   return (
     <div className="hidden lg:block z-10 mb-12 lg:mb-0 lg:-mt-40 w-full" id="searchBox">
@@ -221,34 +215,7 @@ const initialDates = [
                 )}
               </div>
 
-              {/* <div className="flex-1 grid grid-cols-2 relative ">
-                <div className="relative px-4 py-3 md:py-4 md:px-7 lg:py-6 lg:px-8 flex items-center space-x-3 cursor-pointer ">
-                  <div className="text-neutral-300 dark:text-neutral-400">
-                    <MdDateRange size={42} />
-                  </div>
-                  <div className="flex-1">
-                    <span className="block xl:text-lg font-semibold">
-                      Check In
-                    </span>
-                    <span className="block mt-1 text-sm text-neutral-400 font-light">
-                      Add Date
-                    </span>
-                  </div>
-                </div>
-                <div className="relative px-4 py-3 md:py-4 md:px-7 lg:py-6 lg:px-8 flex items-center space-x-3 cursor-pointer">
-                  <div className="text-neutral-300 dark:text-neutral-400">
-                    <MdDateRange size={42} />
-                  </div>
-                  <div className="flex-1">
-                    <span className="block xl:text-lg font-semibold">
-                      Check Out
-                    </span>
-                    <span className="block mt-1 text-sm text-neutral-400 font-light">
-                      Add Date
-                    </span>
-                  </div>
-                </div>
-              </div> */}
+              
             </div>
             <div className="flex relative flex-[1.2]">
               <div className="flex-1 flex items-center space-x-3 focus:outline-none cursor-pointer field-focused">
@@ -339,17 +306,7 @@ const initialDates = [
                   <MdDateRange size={42} />
                 </div>
                 <div className="flex-grow">
-                  {/* <button
-                        type="button"
-                        className="flex-0.5 flex"
-                        onClick={() => setOpenDatePicker((open) => !open)}
-                      >
-                        <input
-                          value={`${startDate === "" ? "Date" : startDate}`}
-                          readOnly
-                          className="inputBox w-5/6 block xl:text-lg font-semibold outline-none"
-                        />
-                      </button> */}
+                  
                   <DatePickerComponent />
                   <span className="block mt-0.5 text-sm text-neutral-400 font-light">
                     Add Date
